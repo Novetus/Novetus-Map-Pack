@@ -1,0 +1,10 @@
+This large floating castle was the main testing ground for explosives. Now, much like the ROBLOX HQ, the Killbots have considered this as a prime target. Unfortunately, they have brought their best to stop anyone standing in their path.
+
+Settings:
+Each wave spawns 35 enemies maximum.
+3 to 5 more enemies spawn per new wave.
+Boss battles happen every 7 waves.
+Heavies start spawning after wave 2.
+Agilities start spawning after wave 4.
+Commanders start spawning after wave 7.
+Commanders have a 1 in 4 chance to spawn after wave 7.

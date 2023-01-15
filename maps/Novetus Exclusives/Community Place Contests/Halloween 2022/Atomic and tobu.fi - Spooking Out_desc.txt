@@ -1,0 +1,5 @@
+Built for 2010L.
+
+This is a fork of our first game, Moving Out, but fully redesigned with new Halloween-themed abilities, maps, and a new lobby. This game was made for and was publicly submitted to the Novetus Halloween 2022 Place Contest on October 22, 2022.
+
+Made by Atomic and tobu.fi.

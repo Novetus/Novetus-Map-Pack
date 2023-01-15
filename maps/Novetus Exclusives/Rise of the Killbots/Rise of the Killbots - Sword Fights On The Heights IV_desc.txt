@@ -1,0 +1,20 @@
+For thousands of years, ROBLOXians fought to the death on this legendary floating structure. Known for it's unique and powerful swords, the Killbots have invaded en masse in an attempt to use the swords' power for their own gain. You were sent there to protect the swords and the sacred Locus, but it was too late. The Killbots have already damaged the Locus, disabling any invulnrability for ROBLOXians. Only the swords are left...
+
+Note: 2007E won't be able to view the swords on this map because the client does not support Part Colors on SpecialMeshes.
+
+Settings:
+Each wave spawns 40 enemies maximum.
+1 to 3 more enemies spawn per new wave.
+Boss battles happen every 6 waves.
+Heavies start spawning after wave 1.
+Agilities start spawning after wave 3.
+Commanders start spawning after wave 6.
+Commanders have a 1 in 4 chance to spawn after wave 6.
+
+Sword Fights on the Heights IV exclusive changes:
+Pistol bullet speed has increased from 500 to 1000
+Shotgun bullet speed has increased from 350 to 650
+Increased Shotgun bullet spread and projectile amount.
+Rockets now are 2x as fast.
+Tripled the wait times between bot spawns.
+Halved the regeneration time.

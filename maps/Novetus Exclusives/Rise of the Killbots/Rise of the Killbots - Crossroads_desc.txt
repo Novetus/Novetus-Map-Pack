@@ -1,0 +1,10 @@
+An ancient arena for thousands of years has been known to be one of the greatest locations in ROBLOXian history. It has long been said that the beacons which hover various parts of the Crossroads protected it for a period of time against the Killbots. However, the Killbots have raided it at full force in an attempt to capture this battlefield.
+
+Settings:
+Each wave spawns 30 enemies maximum.
+2 to 4 more enemies spawn per new wave.
+Boss battles happen every 10 waves.
+Heavies start spawning after wave 2.
+Agilities start spawning after wave 4.
+Commanders start spawning after wave 10.
+Commanders have a 1 in 5 chance to spawn after wave 10.
