@@ -1,0 +1,296 @@
+All the default maps included with Novetus! 
+FILE PATHS:
+\maps\Maps released by year\2006\2006 - Angel Of Truth.rbxl.bz2
+\maps\Maps released by year\2006\2006 - Lava Rush.rbxl.bz2
+\maps\Maps released by year\2006\2006 - Mountain.rbxl.bz2
+\maps\Maps released by year\2006\2006 - Pirate Ship.rbxl.bz2
+\maps\Maps released by year\2006\2006 - Rocket Mayhem.rbxl.bz2
+\maps\Maps released by year\2006\2006 - SharkRock Island.rbxl.bz2
+\maps\Maps released by year\2006\2006 - Sunset Plains.rbxl.bz2
+\maps\Maps released by year\2007\2007 - Bastion of Horsey.rbxl.bz2
+\maps\Maps released by year\2007\2007 - bboy.rbxl.bz2
+\maps\Maps released by year\2007\2007 - Climb the Tallest Ladder in Roblox.rbxl.bz2
+\maps\Maps released by year\2007\2007 - Climb The Tallest Ladder In The Roblox World.rbxl.bz2
+\maps\Maps released by year\2007\2007 - Destroy The Giant Marios.rbxl.bz2
+\maps\Maps released by year\2007\2007 - Elemental Lake.rbxl.bz2
+\maps\Maps released by year\2007\2007 - Emerald Forest.rbxl.bz2
+\maps\Maps released by year\2007\2007 - extreme four corners.rbxl.bz2
+\maps\Maps released by year\2007\2007 - Flaming JAD.rbxl.bz2
+\maps\Maps released by year\2007\2007 - Haunted Hill.rbxl.bz2
+\maps\Maps released by year\2007\2007 - Haunted Mansion.rbxl.bz2
+\maps\Maps released by year\2007\2007 - Humanoid Harvester Horror.rbxl.bz2
+\maps\Maps released by year\2007\2007 - I has a camera testgrounds.rbxl.bz2
+\maps\Maps released by year\2007\2007 - King of the Hill.rbxl.bz2
+\maps\Maps released by year\2007\2007 - leo's place.rbxl.bz2
+\maps\Maps released by year\2007\2007 - millons of Roblox. Kill them.rbxl.bz2
+\maps\Maps released by year\2007\2007 - Nevermoors Blight.rbxl.bz2
+\maps\Maps released by year\2007\2007 - OH NOES! The moon is falling!.rbxl.bz2
+\maps\Maps released by year\2007\2007 - Pinball Wizards!.rbxl.bz2
+\maps\Maps released by year\2007\2007 - PONG.rbxl.bz2
+\maps\Maps released by year\2007\2007 - Rocket Car Rally.rbxl.bz2
+\maps\Maps released by year\2007\2007 - The Front Lines.rbxl.bz2
+\maps\Maps released by year\2007\2007 - The Pit.rbxl.bz2
+\maps\Maps released by year\2007\2007 - Train2.rbxl.bz2
+\maps\Maps released by year\2007\2007 - Trampoline Sword Fight.rbxl.bz2
+\maps\Maps released by year\2007\2007 - Travelers Tale.rbxl.bz2
+\maps\Maps released by year\2008\2008 - Bread Factory Tycoon.rbxl.bz2
+\maps\Maps released by year\2008\2008 - build your city.rbxl.bz2
+\maps\Maps released by year\2008\2008 - Camping Simulator by Are92.rbxl.bz2
+\maps\Maps released by year\2008\2008 - canyon.rbxl.bz2
+\maps\Maps released by year\2008\2008 - cart ride into the epic duck.rbxl.bz2
+\maps\Maps released by year\2008\2008 - Castle Warfare.rbxl.bz2
+\maps\Maps released by year\2008\2008 - Chess Tournament.rbxl.bz2
+\maps\Maps released by year\2008\2008 - City Fight Classes.rbxl.bz2
+\maps\Maps released by year\2008\2008 - Dead Space.rbxl.bz2
+\maps\Maps released by year\2008\2008 - Elemental Lake.rbxl.bz2
+\maps\Maps released by year\2008\2008 - Emerald Forest.rbxl.bz2
+\maps\Maps released by year\2008\2008 - Enjoy A Sinking Ships last voyage.rbxl.bz2
+\maps\Maps released by year\2008\2008 - escape school.rbxl.bz2
+\maps\Maps released by year\2008\2008 - Farm Tycoon.rbxl.bz2
+\maps\Maps released by year\2008\2008 - Four Towers Bridge Battle.rbxl.bz2
+\maps\Maps released by year\2008\2008 - Frozen Peak.rbxl.bz2
+\maps\Maps released by year\2008\2008 - Fun with Mjolnir.rbxl.bz2
+\maps\Maps released by year\2008\2008 - Grow a Brick.rbxl.bz2
+\maps\Maps released by year\2008\2008 - Heli-Wars Desert Attack.rbxl.bz2
+\maps\Maps released by year\2008\2008 - How Long Can You Survive Minigames.rbxl.bz2
+\maps\Maps released by year\2008\2008 - How Long Can You Survive.rbxl.bz2
+\maps\Maps released by year\2008\2008 - Liminal Message.rbxl.bz2
+\maps\Maps released by year\2008\2008 - Martain Invasion.rbxl.bz2
+\maps\Maps released by year\2008\2008 - Minigame World.rbxl.bz2
+\maps\Maps released by year\2008\2008 - minigames5.rbxl.bz2
+\maps\Maps released by year\2008\2008 - New Server Physics Benchmark.rbxl.bz2
+\maps\Maps released by year\2008\2008 - Ninjas VS Samuri Pagoda Battle.rbxl.bz2
+\maps\Maps released by year\2008\2008 - Ninjas vs. Samruai Pagoda Battle.rbxl.bz2
+\maps\Maps released by year\2008\2008 - Nuke the Whales!.rbxl.bz2
+\maps\Maps released by year\2008\2008 - Nuke the Whales.rbxl.bz2
+\maps\Maps released by year\2008\2008 - Obstakle course!!!.rbxl.bz2
+\maps\Maps released by year\2008\2008 - Olympics.rbxl.bz2
+\maps\Maps released by year\2008\2008 - paint ball war.rbxl.bz2
+\maps\Maps released by year\2008\2008 - Pinball Wizards!.rbxl.bz2
+\maps\Maps released by year\2008\2008 - Pirate Army HQ.rbxl.bz2
+\maps\Maps released by year\2008\2008 - Plane Crash.rbxl.bz2
+\maps\Maps released by year\2008\2008 - Roblox HQ 2.0.rbxl.bz2
+\maps\Maps released by year\2008\2008 - Rocket Fight Advanced.rbxl.bz2
+\maps\Maps released by year\2008\2008 - RockPaperScissors.rbxl.bz2
+\maps\Maps released by year\2008\2008 - ROtris.rbxl.bz2
+\maps\Maps released by year\2008\2008 - RoWar PlanetProtection.rbxl.bz2
+\maps\Maps released by year\2008\2008 - RoWar Space Cruise V3 Cruise Life is back by Are92.rbxl.bz2
+\maps\Maps released by year\2008\2008 - Space I.rbxl.bz2
+\maps\Maps released by year\2008\2008 - Sparkle and ClickDetector Demo.rbxl.bz2
+\maps\Maps released by year\2008\2008 - SURVIVE THE GALACTIC STORM.rbxl.bz2
+\maps\Maps released by year\2008\2008 - Sword Training.rbxl.bz2
+\maps\Maps released by year\2008\2008 - Telamons Big World.rbxl.bz2
+\maps\Maps released by year\2008\2008 - Testing Thing.rbxl.bz2
+\maps\Maps released by year\2008\2008 - The Undead Coming v1.2.rbxl.bz2
+\maps\Maps released by year\2008\2008 - TimeReversalUpgraded.rbxl.bz2
+\maps\Maps released by year\2008\2008 - Transformers Obby 1.rbxl.bz2
+\maps\Maps released by year\2008\2008 - Transformers Obby 2.rbxl.bz2
+\maps\Maps released by year\2008\2008 - UnderGroundWars.rbxl.bz2
+\maps\Maps released by year\2008\2008 - WaffleRunners.rbxl.bz2
+\maps\Maps released by year\2008\2008 - War Place.rbxl.bz2
+\maps\Maps released by year\2008\2008 - Wizard Wars.rbxl.bz2
+\maps\Maps released by year\2009\2009 - Deep Digz 2-D.rbxl.bz2
+\maps\Maps released by year\2009\2009 - Desert Warzone Classic.rbxl.bz2
+\maps\Maps released by year\2009\2009 - Fall Down the Stairs XMAS VERSION.rbxl.bz2
+\maps\Maps released by year\2009\2009 - Futuristic Dog-Fight.rbxl.bz2
+\maps\Maps released by year\2009\2009 - Glass Houses 2.rbxl.bz2
+\maps\Maps released by year\2009\2009 - Hide and Seek Lance7.rbxl.bz2
+\maps\Maps released by year\2009\2009 - HIGH SPEED TRAIN!.rbxl.bz2
+\maps\Maps released by year\2009\2009 - Iron Cafe.rbxl.bz2
+\maps\Maps released by year\2009\2009 - NoobTrap.rbxl.bz2
+\maps\Maps released by year\2009\2009 - pacman ctf.rbxl.bz2
+\maps\Maps released by year\2009\2009 - Paint tycoon.rbxl.bz2
+\maps\Maps released by year\2009\2009 - Pipe Riding.rbxl.bz2
+\maps\Maps released by year\2009\2009 - StudioMARIO's Crystal World Fight V1.00.rbxl.bz2
+\maps\Maps released by year\2009\2009 - StudioMARIO's DJ Arena 1.00.rbxl.bz2
+\maps\Maps released by year\2009\2009 - StudioMARIO's EBR Entry V1.00.rbxl.bz2
+\maps\Maps released by year\2009\2009 - StudioMARIO's HostileTakedown V1.00.rbxl.bz2
+\maps\Maps released by year\2009\2009 - StudioMARIO's StarBlox V1.00.rbxl.bz2
+\maps\Maps released by year\2009\2009 - Survive the End of Robloxia.rbxl.bz2
+\maps\Maps released by year\2009\2009 - Survive the Spheres ORIGINAL.rbxl.bz2
+\maps\Maps released by year\2009\2009 - Tropical Obby.rbxl.bz2
+\maps\Maps released by year\2009\2009 - Truss and Slate and Badges Demo.rbxl.bz2
+\maps\Maps released by year\2009\2009 - Twoshues Hide n' Seek.rbxl.bz2
+\maps\Maps released by year\2010\2010 - Calc.rbxl.bz2
+\maps\Maps released by year\2010\2010 - Disaster Hotel.rbxl.bz2
+\maps\Maps released by year\2010\2010 - Flood Escape.rbxl.bz2
+\maps\Maps released by year\2010\2010 - Freeze tag.rbxl.bz2
+\maps\Maps released by year\2010\2010 - Frost Nova.rbxl.bz2
+\maps\Maps released by year\2010\2010 - Grow And Raise EPIK DUCK!.rbxl.bz2
+\maps\Maps released by year\2010\2010 - Haunted Hotel.rbxl.bz2
+\maps\Maps released by year\2010\2010 - Lando's Apartment.rbxl.bz2
+\maps\Maps released by year\2010\2010 - McDonalds Vs KFC.rbxl
+\maps\Maps released by year\2010\2010 - McDonalds Vs KFC.rbxl.bz2
+\maps\Maps released by year\2010\2010 - Nintendo Minigames.rbxl.bz2
+\maps\Maps released by year\2010\2010 - Noob Test Obby.rbxl.bz2
+\maps\Maps released by year\2010\2010 - NoobTrap2.rbxl.bz2
+\maps\Maps released by year\2010\2010 - R.U.N.rbxl.bz2
+\maps\Maps released by year\2010\2010 - Raviable's Devil's Lair.rbxl.bz2
+\maps\Maps released by year\2010\2010 - Reason 2 Die.rbxl.bz2
+\maps\Maps released by year\2010\2010 - Ride a rocket to the space station and moon!.rbxl.bz2
+\maps\Maps released by year\2010\2010 - Ro-Pictionary.rbxl.bz2
+\maps\Maps released by year\2010\2010 - ROBLOX Arcade.rbxl.bz2
+\maps\Maps released by year\2010\2010 - ROBLOX Mall Tycoon.rbxl.bz2
+\maps\Maps released by year\2010\2010 - Rocket Builder.rbxl.bz2
+\maps\Maps released by year\2010\2010 - Town of Robloxia.rbxl.bz2
+\maps\Maps released by year\2010\2010 - Zombie Tower.rbxl.bz2
+\maps\Maps released by year\2011\2011 - Cart Ride into an Epic Duck!.rbxl.bz2
+\maps\Maps released by year\2011\2011 - Chaos Canyon.rbxl.bz2
+\maps\Maps released by year\2011\2011 - Disaster Hotel.rbxl.bz2
+\maps\Maps released by year\2011\2011 - Domo Island Obby Tycoon.rbxl.bz2
+\maps\Maps released by year\2011\2011 - Escape the Flood Obby.rbxl.bz2
+\maps\Maps released by year\2011\2011 - Natural disasters survival.rbxl.bz2
+\maps\Maps released by year\2011\2011 - R.U.N.rbxl.bz2
+\maps\Maps released by year\2011\2011 - Ride a rocket to the ISS or MOON!.rbxl.bz2
+\maps\Maps released by year\2011\2011 - Storm Chasers.rbxl.bz2
+\maps\Maps released by year\2011\2011 - Survive the Disasters.rbxl.bz2
+\maps\Maps released by year\2011\2011 - Survive The End Of The World (Survive The End Of Roblox).rbxl.bz2
+\maps\Maps released by year\2011\2011 - Sword Fight in the DARK.rbxl.bz2
+\maps\Maps released by year\2011\2011 - The Mega Fun and Colorful Obby!.rbxl.bz2
+\maps\Maps released by year\2012\2012 - Build To Survive Zombies.rbxl.bz2
+\maps\Maps released by year\2012\2012 - Happy Home In Robloxia.rbxl.bz2
+\maps\Maps released by year\2012\2012 - Iron Cafe.rbxl.bz2
+\maps\Maps released by year\2012\2012 - Mario Kart ROBLOX Dash.rbxl.bz2
+\maps\Maps released by year\2012\2012 - Pokemon Elemental Brawlers.rbxl.bz2
+\maps\Maps released by year\2012\2012 - Script Builder.rbxl.bz2
+\maps\Maps released by year\2012\2012 - Sword Fights on the Heights IV.rbxl.bz2
+\maps\Maps released by year\2013\2013 - Protect Telemon from zombies.rbxl.bz2
+\maps\Maps released by year\2013\2013 - Zombies Are Attacking KFC!.rbxl.bz2
+\maps\Maps released by year\2015\2015 - Urban Terror Brickbattle.rbxl.bz2
+\maps\Maps released by year\2016\2016 - Demolition Derby.rbxl.bz2
+\maps\Maps released by year\2016\2016 - Nobelium Town V2.rbxl.bz2
+\maps\Maps released by year\2016\2016 - Old Cars v2.rbxl.bz2
+\maps\Maps released by year\2016\2016 - Old Cars.rbxl.bz2
+\maps\Maps released by year\2016\2016 - Public Graffiti.rbxl.bz2
+\maps\Maps released by year\2017\2017 - Hot Knief Fight.rbxl.bz2
+\maps\Maps released by year\2017\2017 - Lego's Obby.rbxl.bz2
+\maps\Maps released by year\2017\2017 - Lego's Plane Wars.rbxl.bz2
+\maps\Maps released by year\2017\2017 - Lego's Tower Climb 2.rbxl.bz2
+\maps\Novetus Exclusives\Bitls Places\Bitl - Build a guy and more 2011.rbxl.bz2
+\maps\Novetus Exclusives\Bitls Places\Bitl - Build a guy and more 2011_desc.txt
+\maps\Novetus Exclusives\Bitls Places\Bitl - Everything Obby.rbxl
+\maps\Novetus Exclusives\Bitls Places\Bitl - Everything Obby.rbxl.bz2
+\maps\Novetus Exclusives\Bitls Places\Bitl - Everything Obby_desc.txt
+\maps\Novetus Exclusives\Bitls Places\Bitl - Portal Playground.rbxl.bz2
+\maps\Novetus Exclusives\Bitls Places\Bitl - Portal Playground_desc.txt
+\maps\Novetus Exclusives\Bitls Places\Bitl - Rise of the zombies 2010.rbxl.bz2
+\maps\Novetus Exclusives\Bitls Places\Bitl - Rise of the zombies 2010_desc.txt
+\maps\Novetus Exclusives\Bitls Places\Bitl - Rise of the zombies 2011.rbxl.bz2
+\maps\Novetus Exclusives\Bitls Places\Bitl - Rise of the zombies 2011_desc.txt
+\maps\Novetus Exclusives\Bitls Places\Bitl - SPORE Galactic Adventures.rbxl.bz2
+\maps\Novetus Exclusives\Community Place Contests\August 2022\Ironman_45 - MW2.rbxl.bz2
+\maps\Novetus Exclusives\Community Place Contests\August 2022\Ironman_45 - MW2_desc.txt
+\maps\Novetus Exclusives\Community Place Contests\August 2022\Lachrymogenic - Lachrys Disorderly Deathmatch.rbxl.bz2
+\maps\Novetus Exclusives\Community Place Contests\August 2022\Lachrymogenic - Lachrys Disorderly Deathmatch_desc.txt
+\maps\Novetus Exclusives\Community Place Contests\August 2022\Zork and Lachrymogenic - Bowlarama.rbxl.bz2
+\maps\Novetus Exclusives\Community Place Contests\August 2022\Zork and Lachrymogenic - Bowlarama_desc.txt
+\maps\Novetus Exclusives\Community Place Contests\Halloween 2022\Atomic and tobu.fi - Spooking Out.rbxl.bz2
+\maps\Novetus Exclusives\Community Place Contests\Halloween 2022\Atomic and tobu.fi - Spooking Out_desc.txt
+\maps\Novetus Exclusives\Community Place Contests\Holiday 2022\Zork and tobu.fi - Explosive Xmas.rbxl.bz2
+\maps\Novetus Exclusives\Crossroads Evolved\Crossroads Evolved.rbxl
+\maps\Novetus Exclusives\Crossroads Evolved\Crossroads Evolved_desc.txt
+\maps\Novetus Exclusives\Rise of the Killbots\Rise of the Killbots - Baseplate.rbxl.bz2
+\maps\Novetus Exclusives\Rise of the Killbots\Rise of the Killbots - Baseplate_desc.txt
+\maps\Novetus Exclusives\Rise of the Killbots\Rise of the Killbots - Bitl's ROBLOX Shootout 2.rbxl.bz2
+\maps\Novetus Exclusives\Rise of the Killbots\Rise of the Killbots - Bitl's ROBLOX Shootout 2_desc.txt
+\maps\Novetus Exclusives\Rise of the Killbots\Rise of the Killbots - Chaos Canyon.rbxl.bz2
+\maps\Novetus Exclusives\Rise of the Killbots\Rise of the Killbots - Chaos Canyon_desc.txt
+\maps\Novetus Exclusives\Rise of the Killbots\Rise of the Killbots - Crossroads.rbxl.bz2
+\maps\Novetus Exclusives\Rise of the Killbots\Rise of the Killbots - Crossroads_desc.txt
+\maps\Novetus Exclusives\Rise of the Killbots\Rise of the Killbots - Glass Houses.rbxl.bz2
+\maps\Novetus Exclusives\Rise of the Killbots\Rise of the Killbots - Glass Houses_desc.txt
+\maps\Novetus Exclusives\Rise of the Killbots\Rise of the Killbots - Haunted Mansion.rbxl.bz2
+\maps\Novetus Exclusives\Rise of the Killbots\Rise of the Killbots - Haunted Mansion_desc.txt
+\maps\Novetus Exclusives\Rise of the Killbots\Rise of the Killbots - ROBLOX HQ 2007.rbxl.bz2
+\maps\Novetus Exclusives\Rise of the Killbots\Rise of the Killbots - ROBLOX HQ 2007_desc.txt
+\maps\Novetus Exclusives\Rise of the Killbots\Rise of the Killbots - Rocket Arena.rbxl.bz2
+\maps\Novetus Exclusives\Rise of the Killbots\Rise of the Killbots - Rocket Arena_desc.txt
+\maps\Novetus Exclusives\Rise of the Killbots\Rise of the Killbots - Sword Fights On The Heights IV.rbxl.bz2
+\maps\Novetus Exclusives\Rise of the Killbots\Rise of the Killbots - Sword Fights On The Heights IV_desc.txt
+\maps\Novetus Exclusives\Rise of the Killbots\Rise of the Killbots - Timmy and the Killbots.rbxl.bz2
+\maps\Novetus Exclusives\Rise of the Killbots\Rise of the Killbots - Timmy and the Killbots_desc.txt
+\maps\Novetus Exclusives\Rise of the Killbots\Dev\Dev - Rise of the Killbots Template Level.rbxl
+\maps\Novetus Exclusives\Rise of the Killbots\Dev\Dev - Rise of the Killbots Template Level.rbxl.bz2
+\maps\Novetus Exclusives\Rise of the Killbots\Dev\Dev - Rise of the Killbots Template Level_desc.txt
+\maps\Novetus Exclusives\Rise of the Killbots\Dev\REPLACE PROPERTIES IN LIGHTING WITH THIS IF YOU WANT PER-VERSION LIGHTING IN ROTKB.txt
+\maps\Novetus Exclusives\ROBLOX Shootout 2\Bitl's ROBLOX Shootout 2 FFA.rbxl.bz2
+\maps\Novetus Exclusives\ROBLOX Shootout 2\Bitl's ROBLOX Shootout 2.rbxl.bz2
+\maps\Universal\Optimized for 2006\Universal - 2006 Crossroads.rbxl.bz2
+\maps\Universal\Optimized for 2006\Universal - 2006 Crossroads_desc.txt
+\maps\Universal\Optimized for 2006\Universal - 2006 Pirate Ship.rbxl.bz2
+\maps\Universal\Optimized for 2006\Universal - 2006 ROBLOX HQ Replica.rbxl.bz2
+\maps\Universal\Optimized for 2006\Universal - 2006 ROBLOX HQ Replica_desc.txt
+\maps\Universal\Optimized for 2006\Universal - 2006 Santa's Winter Stronghold.rbxl.bz2
+\maps\Universal\Optimized for 2006\Universal - 2006 Starter Place 2.rbxl.bz2
+\maps\Universal\Optimized for 2006\Universal - 2006 Starter Place.rbxl.bz2
+\maps\Universal\Optimized for 2007\Universal - 2007 ROBLOX HQ.rbxl.bz2
+\maps\Universal\Optimized for 2007\Universal - 2007 ROBLOX HQ_desc.txt
+\maps\Universal\Optimized for 2007\Universal - DoomSpire and Towers 2007.rbxl.bz2
+\maps\Universal\Optimized for 2007\Universal - ROBLOX Bowling 2007.rbxl.bz2
+\maps\Universal\Optimized for 2007\Universal - Script Builder 2007.rbxl.bz2
+\maps\Universal\Optimized for 2008\Universal - 2008 Grow a Brick.rbxl.bz2
+\maps\Universal\Optimized for 2008\Universal - 2008 Roblox HQ 2.0.rbxl.bz2
+\maps\Universal\Optimized for 2008\Universal - 2008 ROtris.rbxl.bz2
+\maps\Universal\Optimized for 2008\Universal - 2008 The Undead Coming v1.2.rbxl.bz2
+\maps\Universal\Optimized for 2008\Universal - ROBLOX Bowling 2008.rbxl.bz2
+\maps\Universal\Optimized for 2008\Universal - Work At a Pizza Place 2008.rbxl.bz2
+\maps\Universal\Optimized for 2009\Universal - 2009 Fall Down the Stairs XMAS VERSION.rbxl.bz2
+\maps\Universal\Optimized for 2009\Universal - 2009 Iron Cafe.rbxl.bz2
+\maps\Universal\Optimized for 2010\Universal - 2010 ROBLOX Arcade.rbxl.bz2
+\maps\Universal\Optimized for 2010\Universal - 2010 ROBLOXs Skate Park.rbxl.bz2
+\maps\Universal\Optimized for 2010\Universal - DoomSpire and Towers 2010.rbxl.bz2
+\maps\Universal\Optimized for 2010\Universal - ROBLOX Test Place 2010.rbxl.bz2
+\maps\Universal\Optimized for 2010\Universal - Script Builder 2010.rbxl.bz2
+\maps\Universal\Optimized for 2010\Universal - Work at a Pizza Place 2010.rbxl
+\maps\Universal\Optimized for 2010\Universal - Work at a Pizza Place 2010.rbxl.bz2
+\maps\Universal\Optimized for 2011 and above\Universal - 2012 Script Builder.rbxl.bz2
+\maps\Universal\Optimized for most clients\Universal - Build Your Own Game.rbxl.bz2
+\maps\Universal\Optimized for most clients\Universal - Build Your Own Game_desc.txt
+\maps\Universal\Optimized for most clients\Universal - Chaos Canyon.rbxl.bz2
+\maps\Universal\Optimized for most clients\Universal - Chaos Canyon_desc.txt
+\maps\Universal\Optimized for most clients\Universal - Community Construction Extended.rbxl.bz2
+\maps\Universal\Optimized for most clients\Universal - Community Construction Extended_desc.txt
+\maps\Universal\Optimized for most clients\Universal - Community Construction.rbxl.bz2
+\maps\Universal\Optimized for most clients\Universal - Community Construction_desc.txt
+\maps\Universal\Optimized for most clients\Universal - Crossroads.rbxl.bz2
+\maps\Universal\Optimized for most clients\Universal - Crossroads_desc.txt
+\maps\Universal\Optimized for most clients\Universal - Dodge the Teapots of Doom.rbxl.bz2
+\maps\Universal\Optimized for most clients\Universal - Dodge the Teapots of Doom_desc.txt
+\maps\Universal\Optimized for most clients\Universal - Get Crushed by a Speeding Wall 2013!.rbxl.bz2
+\maps\Universal\Optimized for most clients\Universal - Glass Houses.rbxl.bz2
+\maps\Universal\Optimized for most clients\Universal - Happy Home In Robloxia.rbxl.bz2
+\maps\Universal\Optimized for most clients\Universal - Happy Home In Robloxia_desc.txt
+\maps\Universal\Optimized for most clients\Universal - Haunted Mansion.rbxl.bz2
+\maps\Universal\Optimized for most clients\Universal - Haunted Mansion_desc.txt
+\maps\Universal\Optimized for most clients\Universal - Mustafar.rbxl.bz2
+\maps\Universal\Optimized for most clients\Universal - Nuke the Whales!.rbxl.bz2
+\maps\Universal\Optimized for most clients\Universal - Nuke the Whales!_desc.txt
+\maps\Universal\Optimized for most clients\Universal - Person299s Minigames.rbxl.bz2
+\maps\Universal\Optimized for most clients\Universal - ROBLOX HQ.rbxl.bz2
+\maps\Universal\Optimized for most clients\Universal - ROBLOX HQ_desc.txt
+\maps\Universal\Optimized for most clients\Universal - Rocket Arena.rbxl.bz2
+\maps\Universal\Optimized for most clients\Universal - Rocket Arena_desc.txt
+\maps\Universal\Optimized for most clients\Universal - Stairway to Heaven.rbxl.bz2
+\maps\Universal\Optimized for most clients\Universal - Stealth Pilots Crane Trouble.rbxl.bz2
+\maps\Universal\Optimized for most clients\Universal - Stealth Pilots HoverTank Arena 2.0.rbxl.bz2
+\maps\Universal\Optimized for most clients\Universal - Stealth Pilots Rock Raiders.rbxl.bz2
+\maps\Universal\Optimized for most clients\Universal - Stealth Pilots War of the worlds mayhem.rbxl.bz2
+\maps\Universal\Optimized for most clients\Universal - Sunset Plains.rbxl.bz2
+\maps\Universal\Optimized for most clients\Universal - Sword Fight on the Heights I.rbxl.bz2
+\maps\Universal\Optimized for most clients\Universal - Sword Fight on The Heights II.rbxl.bz2
+\maps\Universal\Optimized for most clients\Universal - Sword Fight on The Heights III.rbxl.bz2
+\maps\Universal\Optimized for most clients\Universal - Sword Fight on the Heights III_desc.txt
+\maps\Universal\Optimized for most clients\Universal - Sword Fight on the Heights II_desc.txt
+\maps\Universal\Optimized for most clients\Universal - Sword Fight on The Heights IV.rbxl.bz2
+\maps\Universal\Optimized for most clients\Universal - Sword Fight on the Heights IV_desc.txt
+\maps\Universal\Optimized for most clients\Universal - Sword Fight on the Heights I_desc.txt
+\maps\Universal\Optimized for most clients\Universal - ThrillVille.rbxl
+\maps\Universal\Optimized for most clients\Universal - ThrillVille.rbxl.bz2
+\maps\Universal\Optimized for most clients\Universal - Timmy and the Killbots.rbxl.bz2
+\maps\Universal\Optimized for most clients\Universal - Timmy and the Killbots_desc.txt
+\maps\Universal\Optimized for most clients\Universal - Ultimate Build.rbxl.bz2
+\maps\Universal\Optimized for most clients\Universal - Ultimate Paintball.rbxl.bz2
+\maps\Universal\Optimized for most clients\Universal - Ultimate Paintball_desc.txt
+\maps\Universal\Optimized for most clients\Universal - Welcome to ROBLOX.rbxl.bz2
+\maps\Universal\Optimized for most clients\Universal - Yoricks Resting Place.rbxl.bz2
+\maps\Universal\Optimized for most clients\Universal - Yoricks Resting Place_desc.txt
