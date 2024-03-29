@@ -1,0 +1,3 @@
+Optimized for 2010+.
+
+An example which showcases how skateboards work in Novetus, with functional animations and sounds!
