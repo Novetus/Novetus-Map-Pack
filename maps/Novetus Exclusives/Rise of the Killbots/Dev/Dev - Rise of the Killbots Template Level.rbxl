@@ -1,0 +1,3312 @@
+<roblox xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.roblox.com/roblox.xsd" version="4">
+	<External>null</External>
+	<External>nil</External>
+	<Item class="Workspace" referent="RBX0">
+		<Properties>
+			<Ref name="CurrentCamera">RBX1</Ref>
+			<double name="DistributedGameTime">0</double>
+			<CoordinateFrame name="ModelInPrimary">
+				<X>0</X>
+				<Y>0</Y>
+				<Z>0</Z>
+				<R00>1</R00>
+				<R01>0</R01>
+				<R02>0</R02>
+				<R10>0</R10>
+				<R11>1</R11>
+				<R12>0</R12>
+				<R20>0</R20>
+				<R21>0</R21>
+				<R22>1</R22>
+			</CoordinateFrame>
+			<string name="Name">Workspace</string>
+			<Ref name="PrimaryPart">RBX2</Ref>
+			<bool name="archivable">true</bool>
+		</Properties>
+		<Item class="Part" referent="RBX2">
+			<Properties>
+				<bool name="Anchored">true</bool>
+				<float name="BackParamA">-0.5</float>
+				<float name="BackParamB">0.5</float>
+				<token name="BackSurface">0</token>
+				<token name="BackSurfaceInput">0</token>
+				<float name="BottomParamA">-0.5</float>
+				<float name="BottomParamB">0.5</float>
+				<token name="BottomSurface">0</token>
+				<token name="BottomSurfaceInput">0</token>
+				<int name="BrickColor">194</int>
+				<CoordinateFrame name="CFrame">
+					<X>-0.5</X>
+					<Y>53.4000015</Y>
+					<Z>54.5</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<bool name="CanCollide">false</bool>
+				<bool name="DraggingV1">false</bool>
+				<float name="Elasticity">0.5</float>
+				<token name="FormFactor">1</token>
+				<float name="Friction">0.300000012</float>
+				<float name="FrontParamA">-0.5</float>
+				<float name="FrontParamB">0.5</float>
+				<token name="FrontSurface">0</token>
+				<token name="FrontSurfaceInput">0</token>
+				<float name="LeftParamA">-0.5</float>
+				<float name="LeftParamB">0.5</float>
+				<token name="LeftSurface">0</token>
+				<token name="LeftSurfaceInput">0</token>
+				<bool name="Locked">true</bool>
+				<token name="Material">256</token>
+				<string name="Name">GameManager</string>
+				<float name="Reflectance">0</float>
+				<float name="RightParamA">-0.5</float>
+				<float name="RightParamB">0.5</float>
+				<token name="RightSurface">0</token>
+				<token name="RightSurfaceInput">0</token>
+				<Vector3 name="RotVelocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<float name="TopParamA">-0.5</float>
+				<float name="TopParamB">0.5</float>
+				<token name="TopSurface">0</token>
+				<token name="TopSurfaceInput">0</token>
+				<float name="Transparency">1</float>
+				<Vector3 name="Velocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<bool name="archivable">true</bool>
+				<token name="shape">1</token>
+				<Vector3 name="size">
+					<X>31</X>
+					<Y>13.2000008</Y>
+					<Z>21</Z>
+				</Vector3>
+			</Properties>
+			<Item class="Script" referent="RBX3">
+				<Properties>
+					<bool name="Disabled">false</bool>
+					<Content name="LinkedSource"><null></null></Content>
+					<string name="Name">Game</string>
+					<ProtectedString name="Source">--CHANGE THESE IF YOU WANT TO BALANCE THE GAME ACCORDING TO HOW LARGE YOUR MAP IS.
+local enemycountlimit = 20
+local enemyaddmin = 1
+local enemyaddmax = 3
+local bossbattlewave = 10
+--DON&apos;T CHANGE ANYTHING BELOW
+game.Lighting.WaveMaxForBoss.Value = bossbattlewave
+
+local hint = Instance.new(&quot;Hint&quot;)
+hint.Name = &quot;Hint&quot;
+hint.Parent = script.Parent
+hint.Text = &quot;5 seconds till first wave!&quot;
+wait(5)
+
+while true do
+	wait(0.2)
+
+	if game.Lighting.WaveStarted.Value == false then
+		game.Lighting.Wave.Value = game.Lighting.Wave.Value + 1
+		game.Lighting.WaveForBoss.Value = game.Lighting.WaveForBoss.Value + 1
+
+		if game.Lighting.WaveForBoss.Value &lt; bossbattlewave then
+			if game.Lighting.Wave.Value &gt; 1 then
+				if game.Lighting.DefaultEnemyCount.Value &lt; enemycountlimit then
+					game.Lighting.DefaultEnemyCount.Value = game.Lighting.DefaultEnemyCount.Value + math.random(enemyaddmin,enemyaddmax)
+				else
+					game.Lighting.DefaultEnemyCount.Value = enemycountlimit
+				end
+			else
+				if game.Lighting.DefaultEnemyCount.Value &lt; enemycountlimit then
+					game.Lighting.DefaultEnemyCount.Value = game.Lighting.DefaultEnemyCount.Value + 1
+				else
+					game.Lighting.DefaultEnemyCount.Value = enemycountlimit
+				end
+			end
+		elseif game.Lighting.WaveForBoss.Value &gt; bossbattlewave then
+			if game.Lighting.PreBossDefaultEnemyCount.Value &lt; enemycountlimit then
+				game.Lighting.DefaultEnemyCount.Value = game.Lighting.PreBossDefaultEnemyCount.Value + math.random(enemyaddmin,enemyaddmax)
+			else
+				game.Lighting.PreBossDefaultEnemyCount.Value = enemycountlimit
+				game.Lighting.DefaultEnemyCount.Value = game.Lighting.PreBossDefaultEnemyCount.Value
+			end
+			
+			game.Lighting.WaveForBoss.Value = 1
+			game.Lighting.PreBossDefaultEnemyCount.Value = 0
+		elseif game.Lighting.WaveForBoss.Value == game.Lighting.WaveMaxForBoss.Value then
+			game.Lighting.WaveNeedsBoss.Value = true
+		end
+
+		if game.Lighting.WaveNeedsBoss.Value == true then
+			-- BOSS BATTLE
+			game.Lighting.PreBossDefaultEnemyCount.Value = game.Lighting.DefaultEnemyCount.Value
+			game.Lighting.DefaultEnemyCount.Value = 1
+		end
+
+		game.Lighting.EnemyCount.Value = game.Lighting.DefaultEnemyCount.Value
+		game.Lighting.WaveStarted.Value = true
+
+		while game.Lighting.WaveStarted.Value == true do
+			wait(0.2)
+
+			hint.Text = &quot;Wave: &quot;..game.Lighting.Wave.Value..&quot; | Enemy Count: &quot;..game.Lighting.EnemyCount.Value..&quot;/&quot;..game.Lighting.DefaultEnemyCount.Value
+			
+			if game.Lighting.SpawnedEnemyCount.Value ~= game.Lighting.DefaultEnemyCount.Value then
+				wait(2)
+				local bot = game.Lighting.Killbot:clone()
+				if bot:findFirstChild(&quot;Head&quot;) then
+					bot.Head.Position = script.Parent.Position
+				end
+				bot.Parent = game.Workspace
+				game.Lighting.SpawnedEnemyCount.Value = game.Lighting.SpawnedEnemyCount.Value + 1
+			end
+			wait(1)
+
+			if game.Lighting.EnemyCount.Value &lt; 1 then
+				game.Lighting.WaveStarted.Value = false
+				game.Lighting.WaveNeedsBoss.Value = false
+				game.Lighting.SpawnedEnemyCount.Value = 0
+				hint.Text = &quot;5 seconds till next wave!&quot;
+				wait(5)
+			end
+		end
+	end
+end
+</ProtectedString>
+					<bool name="archivable">true</bool>
+				</Properties>
+			</Item>
+		</Item>
+		<Item class="Camera" referent="RBX1">
+			<Properties>
+				<Ref name="CameraSubject">null</Ref>
+				<token name="CameraType">0</token>
+				<CoordinateFrame name="CoordinateFrame">
+					<X>0.113543861</X>
+					<Y>16.5936222</Y>
+					<Z>72.8391266</Z>
+					<R00>0.999701738</R00>
+					<R01>0.0127252564</R01>
+					<R02>-0.0208467152</R02>
+					<R10>-0</R10>
+					<R11>0.853544116</R11>
+					<R12>0.521020532</R12>
+					<R20>0.0244237147</R20>
+					<R21>-0.520865142</R21>
+					<R22>0.853289485</R22>
+				</CoordinateFrame>
+				<CoordinateFrame name="Focus">
+					<X>0.53047812</X>
+					<Y>6.17321157</Y>
+					<Z>55.7733383</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<string name="Name">Camera</string>
+				<bool name="archivable">true</bool>
+			</Properties>
+		</Item>
+		<Item class="Model" referent="RBX4">
+			<Properties>
+				<CoordinateFrame name="ModelInPrimary">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<string name="Name">Spawns</string>
+				<Ref name="PrimaryPart">RBX5</Ref>
+				<bool name="archivable">true</bool>
+			</Properties>
+			<Item class="SpawnLocation" referent="RBX5">
+				<Properties>
+					<bool name="AllowTeamChangeOnTouch">false</bool>
+					<bool name="Anchored">true</bool>
+					<float name="BackParamA">-0.5</float>
+					<float name="BackParamB">0.5</float>
+					<token name="BackSurface">0</token>
+					<token name="BackSurfaceInput">0</token>
+					<float name="BottomParamA">-0.5</float>
+					<float name="BottomParamB">0.5</float>
+					<token name="BottomSurface">4</token>
+					<token name="BottomSurfaceInput">0</token>
+					<int name="BrickColor">194</int>
+					<CoordinateFrame name="CFrame">
+						<X>0</X>
+						<Y>0.999963105</Y>
+						<Z>50</Z>
+						<R00>1</R00>
+						<R01>0</R01>
+						<R02>0</R02>
+						<R10>0</R10>
+						<R11>1</R11>
+						<R12>0</R12>
+						<R20>0</R20>
+						<R21>0</R21>
+						<R22>1</R22>
+					</CoordinateFrame>
+					<bool name="CanCollide">true</bool>
+					<bool name="DraggingV1">false</bool>
+					<int name="Duration">10</int>
+					<float name="Elasticity">0.5</float>
+					<token name="FormFactor">1</token>
+					<float name="Friction">0.300000012</float>
+					<float name="FrontParamA">-0.5</float>
+					<float name="FrontParamB">0.5</float>
+					<token name="FrontSurface">0</token>
+					<token name="FrontSurfaceInput">0</token>
+					<float name="LeftParamA">-0.5</float>
+					<float name="LeftParamB">0.5</float>
+					<token name="LeftSurface">0</token>
+					<token name="LeftSurfaceInput">0</token>
+					<bool name="Locked">true</bool>
+					<token name="Material">816</token>
+					<string name="Name">SpawnLocation</string>
+					<bool name="Neutral">true</bool>
+					<float name="Reflectance">0</float>
+					<float name="RightParamA">-0.5</float>
+					<float name="RightParamB">0.5</float>
+					<token name="RightSurface">0</token>
+					<token name="RightSurfaceInput">0</token>
+					<Vector3 name="RotVelocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<int name="TeamColor">194</int>
+					<float name="TopParamA">-0.5</float>
+					<float name="TopParamB">0.5</float>
+					<token name="TopSurface">0</token>
+					<token name="TopSurfaceInput">0</token>
+					<float name="Transparency">0</float>
+					<Vector3 name="Velocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<bool name="archivable">true</bool>
+					<token name="shape">1</token>
+					<Vector3 name="size">
+						<X>9</X>
+						<Y>1.20000005</Y>
+						<Z>9</Z>
+					</Vector3>
+				</Properties>
+				<Item class="Decal" referent="RBX6">
+					<Properties>
+						<token name="Face">1</token>
+						<string name="Name">Decal</string>
+						<float name="Shiny">20</float>
+						<float name="Specular">0</float>
+						<Content name="Texture"><url>rbxasset://Textures\SpawnLocation.png</url></Content>
+						<bool name="archivable">true</bool>
+					</Properties>
+				</Item>
+			</Item>
+			<Item class="SpawnLocation" referent="RBX7">
+				<Properties>
+					<bool name="AllowTeamChangeOnTouch">false</bool>
+					<bool name="Anchored">true</bool>
+					<float name="BackParamA">-0.5</float>
+					<float name="BackParamB">0.5</float>
+					<token name="BackSurface">0</token>
+					<token name="BackSurfaceInput">0</token>
+					<float name="BottomParamA">-0.5</float>
+					<float name="BottomParamB">0.5</float>
+					<token name="BottomSurface">4</token>
+					<token name="BottomSurfaceInput">0</token>
+					<int name="BrickColor">194</int>
+					<CoordinateFrame name="CFrame">
+						<X>0</X>
+						<Y>0.999963105</Y>
+						<Z>59</Z>
+						<R00>1</R00>
+						<R01>0</R01>
+						<R02>0</R02>
+						<R10>0</R10>
+						<R11>1</R11>
+						<R12>0</R12>
+						<R20>0</R20>
+						<R21>0</R21>
+						<R22>1</R22>
+					</CoordinateFrame>
+					<bool name="CanCollide">true</bool>
+					<bool name="DraggingV1">false</bool>
+					<int name="Duration">10</int>
+					<float name="Elasticity">0.5</float>
+					<token name="FormFactor">1</token>
+					<float name="Friction">0.300000012</float>
+					<float name="FrontParamA">-0.5</float>
+					<float name="FrontParamB">0.5</float>
+					<token name="FrontSurface">0</token>
+					<token name="FrontSurfaceInput">0</token>
+					<float name="LeftParamA">-0.5</float>
+					<float name="LeftParamB">0.5</float>
+					<token name="LeftSurface">0</token>
+					<token name="LeftSurfaceInput">0</token>
+					<bool name="Locked">true</bool>
+					<token name="Material">816</token>
+					<string name="Name">SpawnLocation</string>
+					<bool name="Neutral">true</bool>
+					<float name="Reflectance">0</float>
+					<float name="RightParamA">-0.5</float>
+					<float name="RightParamB">0.5</float>
+					<token name="RightSurface">0</token>
+					<token name="RightSurfaceInput">0</token>
+					<Vector3 name="RotVelocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<int name="TeamColor">194</int>
+					<float name="TopParamA">-0.5</float>
+					<float name="TopParamB">0.5</float>
+					<token name="TopSurface">0</token>
+					<token name="TopSurfaceInput">0</token>
+					<float name="Transparency">0</float>
+					<Vector3 name="Velocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<bool name="archivable">true</bool>
+					<token name="shape">1</token>
+					<Vector3 name="size">
+						<X>9</X>
+						<Y>1.20000005</Y>
+						<Z>9</Z>
+					</Vector3>
+				</Properties>
+				<Item class="Decal" referent="RBX8">
+					<Properties>
+						<token name="Face">1</token>
+						<string name="Name">Decal</string>
+						<float name="Shiny">20</float>
+						<float name="Specular">0</float>
+						<Content name="Texture"><url>rbxasset://Textures\SpawnLocation.png</url></Content>
+						<bool name="archivable">true</bool>
+					</Properties>
+				</Item>
+			</Item>
+			<Item class="SpawnLocation" referent="RBX9">
+				<Properties>
+					<bool name="AllowTeamChangeOnTouch">false</bool>
+					<bool name="Anchored">true</bool>
+					<float name="BackParamA">-0.5</float>
+					<float name="BackParamB">0.5</float>
+					<token name="BackSurface">0</token>
+					<token name="BackSurfaceInput">0</token>
+					<float name="BottomParamA">-0.5</float>
+					<float name="BottomParamB">0.5</float>
+					<token name="BottomSurface">4</token>
+					<token name="BottomSurfaceInput">0</token>
+					<int name="BrickColor">194</int>
+					<CoordinateFrame name="CFrame">
+						<X>0</X>
+						<Y>1.0001595</Y>
+						<Z>41</Z>
+						<R00>1</R00>
+						<R01>0</R01>
+						<R02>0</R02>
+						<R10>0</R10>
+						<R11>1</R11>
+						<R12>0</R12>
+						<R20>0</R20>
+						<R21>0</R21>
+						<R22>1</R22>
+					</CoordinateFrame>
+					<bool name="CanCollide">true</bool>
+					<bool name="DraggingV1">false</bool>
+					<int name="Duration">10</int>
+					<float name="Elasticity">0.5</float>
+					<token name="FormFactor">1</token>
+					<float name="Friction">0.300000012</float>
+					<float name="FrontParamA">-0.5</float>
+					<float name="FrontParamB">0.5</float>
+					<token name="FrontSurface">0</token>
+					<token name="FrontSurfaceInput">0</token>
+					<float name="LeftParamA">-0.5</float>
+					<float name="LeftParamB">0.5</float>
+					<token name="LeftSurface">0</token>
+					<token name="LeftSurfaceInput">0</token>
+					<bool name="Locked">true</bool>
+					<token name="Material">816</token>
+					<string name="Name">SpawnLocation</string>
+					<bool name="Neutral">true</bool>
+					<float name="Reflectance">0</float>
+					<float name="RightParamA">-0.5</float>
+					<float name="RightParamB">0.5</float>
+					<token name="RightSurface">0</token>
+					<token name="RightSurfaceInput">0</token>
+					<Vector3 name="RotVelocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<int name="TeamColor">194</int>
+					<float name="TopParamA">-0.5</float>
+					<float name="TopParamB">0.5</float>
+					<token name="TopSurface">0</token>
+					<token name="TopSurfaceInput">0</token>
+					<float name="Transparency">0</float>
+					<Vector3 name="Velocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<bool name="archivable">true</bool>
+					<token name="shape">1</token>
+					<Vector3 name="size">
+						<X>9</X>
+						<Y>1.20000005</Y>
+						<Z>9</Z>
+					</Vector3>
+				</Properties>
+				<Item class="Decal" referent="RBX10">
+					<Properties>
+						<token name="Face">1</token>
+						<string name="Name">Decal</string>
+						<float name="Shiny">20</float>
+						<float name="Specular">0</float>
+						<Content name="Texture"><url>rbxasset://Textures\SpawnLocation.png</url></Content>
+						<bool name="archivable">true</bool>
+					</Properties>
+				</Item>
+			</Item>
+			<Item class="SpawnLocation" referent="RBX11">
+				<Properties>
+					<bool name="AllowTeamChangeOnTouch">false</bool>
+					<bool name="Anchored">true</bool>
+					<float name="BackParamA">-0.5</float>
+					<float name="BackParamB">0.5</float>
+					<token name="BackSurface">0</token>
+					<token name="BackSurfaceInput">0</token>
+					<float name="BottomParamA">-0.5</float>
+					<float name="BottomParamB">0.5</float>
+					<token name="BottomSurface">4</token>
+					<token name="BottomSurfaceInput">0</token>
+					<int name="BrickColor">194</int>
+					<CoordinateFrame name="CFrame">
+						<X>9</X>
+						<Y>1.00012898</Y>
+						<Z>50</Z>
+						<R00>1</R00>
+						<R01>0</R01>
+						<R02>0</R02>
+						<R10>0</R10>
+						<R11>1</R11>
+						<R12>0</R12>
+						<R20>0</R20>
+						<R21>0</R21>
+						<R22>1</R22>
+					</CoordinateFrame>
+					<bool name="CanCollide">true</bool>
+					<bool name="DraggingV1">false</bool>
+					<int name="Duration">10</int>
+					<float name="Elasticity">0.5</float>
+					<token name="FormFactor">1</token>
+					<float name="Friction">0.300000012</float>
+					<float name="FrontParamA">-0.5</float>
+					<float name="FrontParamB">0.5</float>
+					<token name="FrontSurface">0</token>
+					<token name="FrontSurfaceInput">0</token>
+					<float name="LeftParamA">-0.5</float>
+					<float name="LeftParamB">0.5</float>
+					<token name="LeftSurface">0</token>
+					<token name="LeftSurfaceInput">0</token>
+					<bool name="Locked">true</bool>
+					<token name="Material">816</token>
+					<string name="Name">SpawnLocation</string>
+					<bool name="Neutral">true</bool>
+					<float name="Reflectance">0</float>
+					<float name="RightParamA">-0.5</float>
+					<float name="RightParamB">0.5</float>
+					<token name="RightSurface">0</token>
+					<token name="RightSurfaceInput">0</token>
+					<Vector3 name="RotVelocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<int name="TeamColor">194</int>
+					<float name="TopParamA">-0.5</float>
+					<float name="TopParamB">0.5</float>
+					<token name="TopSurface">0</token>
+					<token name="TopSurfaceInput">0</token>
+					<float name="Transparency">0</float>
+					<Vector3 name="Velocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<bool name="archivable">true</bool>
+					<token name="shape">1</token>
+					<Vector3 name="size">
+						<X>9</X>
+						<Y>1.20000005</Y>
+						<Z>9</Z>
+					</Vector3>
+				</Properties>
+				<Item class="Decal" referent="RBX12">
+					<Properties>
+						<token name="Face">1</token>
+						<string name="Name">Decal</string>
+						<float name="Shiny">20</float>
+						<float name="Specular">0</float>
+						<Content name="Texture"><url>rbxasset://Textures\SpawnLocation.png</url></Content>
+						<bool name="archivable">true</bool>
+					</Properties>
+				</Item>
+			</Item>
+			<Item class="SpawnLocation" referent="RBX13">
+				<Properties>
+					<bool name="AllowTeamChangeOnTouch">false</bool>
+					<bool name="Anchored">true</bool>
+					<float name="BackParamA">-0.5</float>
+					<float name="BackParamB">0.5</float>
+					<token name="BackSurface">0</token>
+					<token name="BackSurfaceInput">0</token>
+					<float name="BottomParamA">-0.5</float>
+					<float name="BottomParamB">0.5</float>
+					<token name="BottomSurface">4</token>
+					<token name="BottomSurfaceInput">0</token>
+					<int name="BrickColor">194</int>
+					<CoordinateFrame name="CFrame">
+						<X>9</X>
+						<Y>1.00031209</Y>
+						<Z>41</Z>
+						<R00>1</R00>
+						<R01>0</R01>
+						<R02>0</R02>
+						<R10>0</R10>
+						<R11>1</R11>
+						<R12>0</R12>
+						<R20>0</R20>
+						<R21>0</R21>
+						<R22>1</R22>
+					</CoordinateFrame>
+					<bool name="CanCollide">true</bool>
+					<bool name="DraggingV1">false</bool>
+					<int name="Duration">10</int>
+					<float name="Elasticity">0.5</float>
+					<token name="FormFactor">1</token>
+					<float name="Friction">0.300000012</float>
+					<float name="FrontParamA">-0.5</float>
+					<float name="FrontParamB">0.5</float>
+					<token name="FrontSurface">0</token>
+					<token name="FrontSurfaceInput">0</token>
+					<float name="LeftParamA">-0.5</float>
+					<float name="LeftParamB">0.5</float>
+					<token name="LeftSurface">0</token>
+					<token name="LeftSurfaceInput">0</token>
+					<bool name="Locked">true</bool>
+					<token name="Material">816</token>
+					<string name="Name">SpawnLocation</string>
+					<bool name="Neutral">true</bool>
+					<float name="Reflectance">0</float>
+					<float name="RightParamA">-0.5</float>
+					<float name="RightParamB">0.5</float>
+					<token name="RightSurface">0</token>
+					<token name="RightSurfaceInput">0</token>
+					<Vector3 name="RotVelocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<int name="TeamColor">194</int>
+					<float name="TopParamA">-0.5</float>
+					<float name="TopParamB">0.5</float>
+					<token name="TopSurface">0</token>
+					<token name="TopSurfaceInput">0</token>
+					<float name="Transparency">0</float>
+					<Vector3 name="Velocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<bool name="archivable">true</bool>
+					<token name="shape">1</token>
+					<Vector3 name="size">
+						<X>9</X>
+						<Y>1.20000005</Y>
+						<Z>9</Z>
+					</Vector3>
+				</Properties>
+				<Item class="Decal" referent="RBX14">
+					<Properties>
+						<token name="Face">1</token>
+						<string name="Name">Decal</string>
+						<float name="Shiny">20</float>
+						<float name="Specular">0</float>
+						<Content name="Texture"><url>rbxasset://Textures\SpawnLocation.png</url></Content>
+						<bool name="archivable">true</bool>
+					</Properties>
+				</Item>
+			</Item>
+			<Item class="SpawnLocation" referent="RBX15">
+				<Properties>
+					<bool name="AllowTeamChangeOnTouch">false</bool>
+					<bool name="Anchored">true</bool>
+					<float name="BackParamA">-0.5</float>
+					<float name="BackParamB">0.5</float>
+					<token name="BackSurface">0</token>
+					<token name="BackSurfaceInput">0</token>
+					<float name="BottomParamA">-0.5</float>
+					<float name="BottomParamB">0.5</float>
+					<token name="BottomSurface">4</token>
+					<token name="BottomSurfaceInput">0</token>
+					<int name="BrickColor">194</int>
+					<CoordinateFrame name="CFrame">
+						<X>9</X>
+						<Y>1.00012898</Y>
+						<Z>59</Z>
+						<R00>1</R00>
+						<R01>0</R01>
+						<R02>0</R02>
+						<R10>0</R10>
+						<R11>1</R11>
+						<R12>0</R12>
+						<R20>0</R20>
+						<R21>0</R21>
+						<R22>1</R22>
+					</CoordinateFrame>
+					<bool name="CanCollide">true</bool>
+					<bool name="DraggingV1">false</bool>
+					<int name="Duration">10</int>
+					<float name="Elasticity">0.5</float>
+					<token name="FormFactor">1</token>
+					<float name="Friction">0.300000012</float>
+					<float name="FrontParamA">-0.5</float>
+					<float name="FrontParamB">0.5</float>
+					<token name="FrontSurface">0</token>
+					<token name="FrontSurfaceInput">0</token>
+					<float name="LeftParamA">-0.5</float>
+					<float name="LeftParamB">0.5</float>
+					<token name="LeftSurface">0</token>
+					<token name="LeftSurfaceInput">0</token>
+					<bool name="Locked">true</bool>
+					<token name="Material">816</token>
+					<string name="Name">SpawnLocation</string>
+					<bool name="Neutral">true</bool>
+					<float name="Reflectance">0</float>
+					<float name="RightParamA">-0.5</float>
+					<float name="RightParamB">0.5</float>
+					<token name="RightSurface">0</token>
+					<token name="RightSurfaceInput">0</token>
+					<Vector3 name="RotVelocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<int name="TeamColor">194</int>
+					<float name="TopParamA">-0.5</float>
+					<float name="TopParamB">0.5</float>
+					<token name="TopSurface">0</token>
+					<token name="TopSurfaceInput">0</token>
+					<float name="Transparency">0</float>
+					<Vector3 name="Velocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<bool name="archivable">true</bool>
+					<token name="shape">1</token>
+					<Vector3 name="size">
+						<X>9</X>
+						<Y>1.20000005</Y>
+						<Z>9</Z>
+					</Vector3>
+				</Properties>
+				<Item class="Decal" referent="RBX16">
+					<Properties>
+						<token name="Face">1</token>
+						<string name="Name">Decal</string>
+						<float name="Shiny">20</float>
+						<float name="Specular">0</float>
+						<Content name="Texture"><url>rbxasset://Textures\SpawnLocation.png</url></Content>
+						<bool name="archivable">true</bool>
+					</Properties>
+				</Item>
+			</Item>
+			<Item class="SpawnLocation" referent="RBX17">
+				<Properties>
+					<bool name="AllowTeamChangeOnTouch">false</bool>
+					<bool name="Anchored">true</bool>
+					<float name="BackParamA">-0.5</float>
+					<float name="BackParamB">0.5</float>
+					<token name="BackSurface">0</token>
+					<token name="BackSurfaceInput">0</token>
+					<float name="BottomParamA">-0.5</float>
+					<float name="BottomParamB">0.5</float>
+					<token name="BottomSurface">4</token>
+					<token name="BottomSurfaceInput">0</token>
+					<int name="BrickColor">194</int>
+					<CoordinateFrame name="CFrame">
+						<X>-9</X>
+						<Y>1.00052571</Y>
+						<Z>41</Z>
+						<R00>1</R00>
+						<R01>0</R01>
+						<R02>0</R02>
+						<R10>0</R10>
+						<R11>1</R11>
+						<R12>0</R12>
+						<R20>0</R20>
+						<R21>0</R21>
+						<R22>1</R22>
+					</CoordinateFrame>
+					<bool name="CanCollide">true</bool>
+					<bool name="DraggingV1">false</bool>
+					<int name="Duration">10</int>
+					<float name="Elasticity">0.5</float>
+					<token name="FormFactor">1</token>
+					<float name="Friction">0.300000012</float>
+					<float name="FrontParamA">-0.5</float>
+					<float name="FrontParamB">0.5</float>
+					<token name="FrontSurface">0</token>
+					<token name="FrontSurfaceInput">0</token>
+					<float name="LeftParamA">-0.5</float>
+					<float name="LeftParamB">0.5</float>
+					<token name="LeftSurface">0</token>
+					<token name="LeftSurfaceInput">0</token>
+					<bool name="Locked">true</bool>
+					<token name="Material">816</token>
+					<string name="Name">SpawnLocation</string>
+					<bool name="Neutral">true</bool>
+					<float name="Reflectance">0</float>
+					<float name="RightParamA">-0.5</float>
+					<float name="RightParamB">0.5</float>
+					<token name="RightSurface">0</token>
+					<token name="RightSurfaceInput">0</token>
+					<Vector3 name="RotVelocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<int name="TeamColor">194</int>
+					<float name="TopParamA">-0.5</float>
+					<float name="TopParamB">0.5</float>
+					<token name="TopSurface">0</token>
+					<token name="TopSurfaceInput">0</token>
+					<float name="Transparency">0</float>
+					<Vector3 name="Velocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<bool name="archivable">true</bool>
+					<token name="shape">1</token>
+					<Vector3 name="size">
+						<X>9</X>
+						<Y>1.20000005</Y>
+						<Z>9</Z>
+					</Vector3>
+				</Properties>
+				<Item class="Decal" referent="RBX18">
+					<Properties>
+						<token name="Face">1</token>
+						<string name="Name">Decal</string>
+						<float name="Shiny">20</float>
+						<float name="Specular">0</float>
+						<Content name="Texture"><url>rbxasset://Textures\SpawnLocation.png</url></Content>
+						<bool name="archivable">true</bool>
+					</Properties>
+				</Item>
+			</Item>
+			<Item class="SpawnLocation" referent="RBX19">
+				<Properties>
+					<bool name="AllowTeamChangeOnTouch">false</bool>
+					<bool name="Anchored">true</bool>
+					<float name="BackParamA">-0.5</float>
+					<float name="BackParamB">0.5</float>
+					<token name="BackSurface">0</token>
+					<token name="BackSurfaceInput">0</token>
+					<float name="BottomParamA">-0.5</float>
+					<float name="BottomParamB">0.5</float>
+					<token name="BottomSurface">4</token>
+					<token name="BottomSurfaceInput">0</token>
+					<int name="BrickColor">194</int>
+					<CoordinateFrame name="CFrame">
+						<X>-9</X>
+						<Y>1.00034261</Y>
+						<Z>50</Z>
+						<R00>1</R00>
+						<R01>0</R01>
+						<R02>0</R02>
+						<R10>0</R10>
+						<R11>1</R11>
+						<R12>0</R12>
+						<R20>0</R20>
+						<R21>0</R21>
+						<R22>1</R22>
+					</CoordinateFrame>
+					<bool name="CanCollide">true</bool>
+					<bool name="DraggingV1">false</bool>
+					<int name="Duration">10</int>
+					<float name="Elasticity">0.5</float>
+					<token name="FormFactor">1</token>
+					<float name="Friction">0.300000012</float>
+					<float name="FrontParamA">-0.5</float>
+					<float name="FrontParamB">0.5</float>
+					<token name="FrontSurface">0</token>
+					<token name="FrontSurfaceInput">0</token>
+					<float name="LeftParamA">-0.5</float>
+					<float name="LeftParamB">0.5</float>
+					<token name="LeftSurface">0</token>
+					<token name="LeftSurfaceInput">0</token>
+					<bool name="Locked">true</bool>
+					<token name="Material">816</token>
+					<string name="Name">SpawnLocation</string>
+					<bool name="Neutral">true</bool>
+					<float name="Reflectance">0</float>
+					<float name="RightParamA">-0.5</float>
+					<float name="RightParamB">0.5</float>
+					<token name="RightSurface">0</token>
+					<token name="RightSurfaceInput">0</token>
+					<Vector3 name="RotVelocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<int name="TeamColor">194</int>
+					<float name="TopParamA">-0.5</float>
+					<float name="TopParamB">0.5</float>
+					<token name="TopSurface">0</token>
+					<token name="TopSurfaceInput">0</token>
+					<float name="Transparency">0</float>
+					<Vector3 name="Velocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<bool name="archivable">true</bool>
+					<token name="shape">1</token>
+					<Vector3 name="size">
+						<X>9</X>
+						<Y>1.20000005</Y>
+						<Z>9</Z>
+					</Vector3>
+				</Properties>
+				<Item class="Decal" referent="RBX20">
+					<Properties>
+						<token name="Face">1</token>
+						<string name="Name">Decal</string>
+						<float name="Shiny">20</float>
+						<float name="Specular">0</float>
+						<Content name="Texture"><url>rbxasset://Textures\SpawnLocation.png</url></Content>
+						<bool name="archivable">true</bool>
+					</Properties>
+				</Item>
+			</Item>
+			<Item class="SpawnLocation" referent="RBX21">
+				<Properties>
+					<bool name="AllowTeamChangeOnTouch">false</bool>
+					<bool name="Anchored">true</bool>
+					<float name="BackParamA">-0.5</float>
+					<float name="BackParamB">0.5</float>
+					<token name="BackSurface">0</token>
+					<token name="BackSurfaceInput">0</token>
+					<float name="BottomParamA">-0.5</float>
+					<float name="BottomParamB">0.5</float>
+					<token name="BottomSurface">4</token>
+					<token name="BottomSurfaceInput">0</token>
+					<int name="BrickColor">194</int>
+					<CoordinateFrame name="CFrame">
+						<X>-9</X>
+						<Y>1.00034261</Y>
+						<Z>59</Z>
+						<R00>1</R00>
+						<R01>0</R01>
+						<R02>0</R02>
+						<R10>0</R10>
+						<R11>1</R11>
+						<R12>0</R12>
+						<R20>0</R20>
+						<R21>0</R21>
+						<R22>1</R22>
+					</CoordinateFrame>
+					<bool name="CanCollide">true</bool>
+					<bool name="DraggingV1">false</bool>
+					<int name="Duration">10</int>
+					<float name="Elasticity">0.5</float>
+					<token name="FormFactor">1</token>
+					<float name="Friction">0.300000012</float>
+					<float name="FrontParamA">-0.5</float>
+					<float name="FrontParamB">0.5</float>
+					<token name="FrontSurface">0</token>
+					<token name="FrontSurfaceInput">0</token>
+					<float name="LeftParamA">-0.5</float>
+					<float name="LeftParamB">0.5</float>
+					<token name="LeftSurface">0</token>
+					<token name="LeftSurfaceInput">0</token>
+					<bool name="Locked">true</bool>
+					<token name="Material">816</token>
+					<string name="Name">SpawnLocation</string>
+					<bool name="Neutral">true</bool>
+					<float name="Reflectance">0</float>
+					<float name="RightParamA">-0.5</float>
+					<float name="RightParamB">0.5</float>
+					<token name="RightSurface">0</token>
+					<token name="RightSurfaceInput">0</token>
+					<Vector3 name="RotVelocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<int name="TeamColor">194</int>
+					<float name="TopParamA">-0.5</float>
+					<float name="TopParamB">0.5</float>
+					<token name="TopSurface">0</token>
+					<token name="TopSurfaceInput">0</token>
+					<float name="Transparency">0</float>
+					<Vector3 name="Velocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<bool name="archivable">true</bool>
+					<token name="shape">1</token>
+					<Vector3 name="size">
+						<X>9</X>
+						<Y>1.20000005</Y>
+						<Z>9</Z>
+					</Vector3>
+				</Properties>
+				<Item class="Decal" referent="RBX22">
+					<Properties>
+						<token name="Face">1</token>
+						<string name="Name">Decal</string>
+						<float name="Shiny">20</float>
+						<float name="Specular">0</float>
+						<Content name="Texture"><url>rbxasset://Textures\SpawnLocation.png</url></Content>
+						<bool name="archivable">true</bool>
+					</Properties>
+				</Item>
+			</Item>
+		</Item>
+		<Item class="Script" referent="RBX23">
+			<Properties>
+				<bool name="Disabled">false</bool>
+				<Content name="LinkedSource"><null></null></Content>
+				<string name="Name">Regenerate</string>
+				<ProtectedString name="Source">model = game.Workspace.MAP MODEL HERE
+messageText = &quot;Regenerating the Map&quot;
+
+message = Instance.new(&quot;Message&quot;)
+message.Text = messageText
+backup = model:clone()
+
+while true do
+	wait( 500 *(1 - math.random()*0.5))
+
+	message.Parent = game.Workspace
+	model:remove()
+
+	wait(4)
+
+	model = backup:clone()
+	model.Parent = game.Workspace
+	model:makeJoints()
+	message.Parent = nil
+end
+</ProtectedString>
+				<bool name="archivable">true</bool>
+			</Properties>
+		</Item>
+	</Item>
+	<Item class="RunService" referent="RBX24">
+		<Properties>
+			<string name="Name">Run Service</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<External>RBX25</External>
+	<External>RBX26</External>
+	<Item class="ContentProvider" referent="RBX27">
+		<Properties>
+			<string name="Name">Instance</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="ContentFilter" referent="RBX28">
+		<Properties>
+			<string name="Name">ContentFilter</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="KeyframeSequenceProvider" referent="RBX29">
+		<Properties>
+			<string name="Name">Instance</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="GuiService" referent="RBX30">
+		<Properties>
+			<string name="Name">GuiService</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="Players" referent="RBX31">
+		<Properties>
+			<int name="MaxPlayers">12</int>
+			<string name="Name">Players</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="StarterPack" referent="RBX32">
+		<Properties>
+			<string name="Name">StarterPack</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+		<Item class="Tool" referent="RBX33">
+			<Properties>
+				<bool name="Enabled">true</bool>
+				<CoordinateFrame name="Grip">
+					<X>0</X>
+					<Y>-0.200000003</Y>
+					<Z>0</Z>
+					<R00>0.999200881</R00>
+					<R01>0.0399680398</R01>
+					<R02>0</R02>
+					<R10>-0.0399680361</R10>
+					<R11>0.999201</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>-0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<string name="Name">Pistol</string>
+				<Content name="TextureId"><url>rbxasset://../../../shareddata/RiseOfTheKillbots/textures/pistol_icon.png</url></Content>
+				<bool name="archivable">true</bool>
+			</Properties>
+			<Item class="Script" referent="RBX34">
+				<Properties>
+					<bool name="Disabled">true</bool>
+					<Content name="LinkedSource"><null></null></Content>
+					<string name="Name">Paintball</string>
+					<ProtectedString name="Source">ball = script.Parent
+
+function onTouched(hit)	
+	wait(0.001)
+
+	--[[
+	if hit:getMass() &lt; 1.2 * 200 then
+		hit.BrickColor = ball.BrickColor
+	end]]--
+	-- make a splat
+
+	for i=1,3 do
+		local s = Instance.new(&quot;Part&quot;)
+		s.Name = &quot;Shrapnel&quot; 
+		s.Shape = 1 -- block
+		s.formFactor = 2 -- plate
+		s.Size = Vector3.new(1,.4,1)
+		s.BrickColor = ball.BrickColor
+		local v = Vector3.new(math.random(-1,1), math.random(0,1), math.random(-1,1))
+		s.Velocity = 15 * v
+		s.CFrame = CFrame.new(ball.Position + v, v)
+		ball.BrickCleanup:clone().Parent = s
+		s.BrickCleanup.Disabled = false
+		s.Parent = game.Workspace	
+	end
+
+	connection:disconnect()
+	ball.Parent = nil
+end
+
+function tagHumanoid(humanoid)
+	-- todo: make tag expire
+	local tag = ball:findFirstChild(&quot;creator&quot;)
+	if tag ~= nil then
+		local new_tag = tag:clone()
+		new_tag.Parent = humanoid
+	end
+end
+
+
+function untagHumanoid(humanoid)
+	if humanoid ~= nil then
+		local tag = humanoid:findFirstChild(&quot;creator&quot;)
+		if tag ~= nil then
+			tag.Parent = nil
+		end
+	end
+end
+
+connection = ball.Touched:connect(onTouched)
+
+wait(8)
+ball.Parent = nil
+</ProtectedString>
+					<bool name="archivable">true</bool>
+				</Properties>
+			</Item>
+			<Item class="LocalScript" referent="RBX35">
+				<Properties>
+					<bool name="Disabled">false</bool>
+					<Content name="LinkedSource"><null></null></Content>
+					<string name="Name">Mouselcon</string>
+					<ProtectedString name="Source">local MOUSE_ICON = &apos;rbxasset://textures/GunCursor.png&apos;
+local RELOADING_ICON = &apos;rbxasset://textures/GunWaitCursor.png&apos;
+
+local Tool = script.Parent
+
+local Mouse = nil
+
+local function UpdateIcon()
+	if Mouse then
+		Mouse.Icon = Tool.Enabled and MOUSE_ICON or RELOADING_ICON
+	end
+end
+
+local function OnEquipped(mouse)
+	Mouse = mouse
+	UpdateIcon()
+end
+
+local function OnChanged(property)
+	if property == &apos;Enabled&apos; then
+		UpdateIcon()
+	end
+end
+
+Tool.Equipped:connect(OnEquipped)
+Tool.Changed:connect(OnChanged)
+</ProtectedString>
+					<bool name="archivable">true</bool>
+				</Properties>
+			</Item>
+			<Item class="Script" referent="RBX36">
+				<Properties>
+					<bool name="Disabled">false</bool>
+					<Content name="LinkedSource"><null></null></Content>
+					<string name="Name">PaintballShooter</string>
+					<ProtectedString name="Source">Tool = script.Parent
+
+function fire(v)
+
+	Tool.Handle.Fire:play()
+	
+
+	local vCharacter = Tool.Parent
+	local vPlayer = game.Players:playerFromCharacter(vCharacter)
+
+	local missile = Instance.new(&quot;Part&quot;)
+
+        
+
+	local spawnPos = vCharacter.PrimaryPart.Position
+	
+
+
+	spawnPos  = spawnPos + (v * 8)
+
+	missile.Position = spawnPos
+	missile.Size = Vector3.new(1,1,1)
+	missile.Velocity = v * 500
+	missile.BrickColor = BrickColor.new(26)
+	missile.Shape = 0
+	missile.BottomSurface = 0
+	missile.TopSurface = 0
+	missile.Name = &quot;Bullet&quot;
+	missile.Elasticity = 0
+	missile.Reflectance = 0
+	missile.Friction = 1
+	missile.CanCollide = false
+
+	local force = Instance.new(&quot;BodyForce&quot;)
+	force.force = Vector3.new(0,102.7,0)
+	force.Parent = missile
+
+	local damage = Instance.new(&quot;NumberValue&quot;)
+	damage.Name = &quot;Damage&quot;
+	damage.Value = 15 + math.random(0,3)
+	damage.Parent = missile
+	
+	Tool.BrickCleanup:clone().Parent = missile
+	missile.BrickCleanup.Disabled = false
+
+	--[[local new_script = script.Parent.Paintball:clone()
+	new_script.Disabled = false
+	new_script.Parent = missile]]--
+
+	local creator_tag = Instance.new(&quot;ObjectValue&quot;)
+	creator_tag.Value = vPlayer
+	creator_tag.Name = &quot;creator&quot;
+	creator_tag.Parent = missile
+	
+	
+
+	missile.Parent = game.Workspace
+
+end
+
+Tool.Enabled = true
+function onActivated()
+
+	if not Tool.Enabled then
+		return
+	end
+
+	Tool.Enabled = false
+
+	local character = Tool.Parent;
+	local humanoid = character.Humanoid
+	if humanoid == nil then
+		print(&quot;Humanoid not found&quot;)
+		return 
+	end
+
+	local targetPos = humanoid.TargetPoint
+	local lookAt = (targetPos - character.Head.Position).unit
+
+	fire(lookAt)
+	wait(0.1)
+
+	Tool.Enabled = true
+end
+
+
+script.Parent.Activated:connect(onActivated)
+</ProtectedString>
+					<bool name="archivable">true</bool>
+				</Properties>
+			</Item>
+			<Item class="Script" referent="RBX37">
+				<Properties>
+					<bool name="Disabled">true</bool>
+					<Content name="LinkedSource"><null></null></Content>
+					<string name="Name">BrickCleanup</string>
+					<ProtectedString name="Source">-- this script removes its parent from the workspace after 120 seconds
+
+wait(15)
+script.Parent.Parent = nil</ProtectedString>
+					<bool name="archivable">true</bool>
+				</Properties>
+			</Item>
+			<Item class="Part" referent="RBX38">
+				<Properties>
+					<bool name="Anchored">false</bool>
+					<float name="BackParamA">-0.5</float>
+					<float name="BackParamB">0.5</float>
+					<token name="BackSurface">0</token>
+					<token name="BackSurfaceInput">0</token>
+					<float name="BottomParamA">-0.5</float>
+					<float name="BottomParamB">0.5</float>
+					<token name="BottomSurface">0</token>
+					<token name="BottomSurfaceInput">0</token>
+					<int name="BrickColor">194</int>
+					<CoordinateFrame name="CFrame">
+						<X>0.434713304</X>
+						<Y>5.19890928</Y>
+						<Z>51.0338974</Z>
+						<R00>0.765911818</R00>
+						<R01>-0.030124668</R01>
+						<R02>-0.642238379</R02>
+						<R10>0.0399680249</R10>
+						<R11>0.999200642</R11>
+						<R12>0.000796274282</R12>
+						<R20>0.641700983</R20>
+						<R21>-0.0262788739</R21>
+						<R22>0.766503751</R22>
+					</CoordinateFrame>
+					<bool name="CanCollide">false</bool>
+					<bool name="DraggingV1">false</bool>
+					<float name="Elasticity">0.5</float>
+					<token name="FormFactor">0</token>
+					<float name="Friction">0.300000012</float>
+					<float name="FrontParamA">-0.5</float>
+					<float name="FrontParamB">0.5</float>
+					<token name="FrontSurface">0</token>
+					<token name="FrontSurfaceInput">0</token>
+					<float name="LeftParamA">-0.5</float>
+					<float name="LeftParamB">0.5</float>
+					<token name="LeftSurface">0</token>
+					<token name="LeftSurfaceInput">0</token>
+					<bool name="Locked">false</bool>
+					<token name="Material">256</token>
+					<string name="Name">Handle</string>
+					<float name="Reflectance">0</float>
+					<float name="RightParamA">-0.5</float>
+					<float name="RightParamB">0.5</float>
+					<token name="RightSurface">0</token>
+					<token name="RightSurfaceInput">0</token>
+					<Vector3 name="RotVelocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<float name="TopParamA">-0.5</float>
+					<float name="TopParamB">0.5</float>
+					<token name="TopSurface">0</token>
+					<token name="TopSurfaceInput">0</token>
+					<float name="Transparency">0</float>
+					<Vector3 name="Velocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<bool name="archivable">true</bool>
+					<token name="shape">1</token>
+					<Vector3 name="size">
+						<X>1</X>
+						<Y>1</Y>
+						<Z>1</Z>
+					</Vector3>
+				</Properties>
+				<Item class="SpecialMesh" referent="RBX39">
+					<Properties>
+						<token name="LODX">2</token>
+						<token name="LODY">2</token>
+						<Content name="MeshId"><url>rbxasset://../../../shareddata/RiseOfTheKillbots/fonts/pistol.mesh</url></Content>
+						<token name="MeshType">5</token>
+						<string name="Name">Mesh</string>
+						<Vector3 name="Offset">
+							<X>0</X>
+							<Y>0</Y>
+							<Z>0</Z>
+						</Vector3>
+						<Vector3 name="Scale">
+							<X>1</X>
+							<Y>1</Y>
+							<Z>1</Z>
+						</Vector3>
+						<Content name="TextureId"><url>rbxasset://../../../shareddata/RiseOfTheKillbots/textures/pistol.png</url></Content>
+						<Vector3 name="VertexColor">
+							<X>97</X>
+							<Y>97</Y>
+							<Z>97</Z>
+						</Vector3>
+						<bool name="archivable">true</bool>
+					</Properties>
+				</Item>
+				<Item class="Sound" referent="RBX40">
+					<Properties>
+						<bool name="Looped">false</bool>
+						<string name="Name">Fire</string>
+						<float name="Pitch">1</float>
+						<int name="PlayCount">-1</int>
+						<bool name="PlayOnRemove">false</bool>
+						<Content name="SoundId"><url>rbxasset://../../../shareddata/RiseOfTheKillbots/sounds/pistol_fire.wav</url></Content>
+						<float name="Volume">0.5</float>
+						<bool name="archivable">true</bool>
+					</Properties>
+				</Item>
+			</Item>
+		</Item>
+		<Item class="Tool" referent="RBX41">
+			<Properties>
+				<bool name="Enabled">true</bool>
+				<CoordinateFrame name="Grip">
+					<X>0</X>
+					<Y>-0.200000003</Y>
+					<Z>0</Z>
+					<R00>0.999200881</R00>
+					<R01>0.0399680398</R01>
+					<R02>0</R02>
+					<R10>-0.0399680361</R10>
+					<R11>0.999201</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>-0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<string name="Name">Shotgun</string>
+				<Content name="TextureId"><url>rbxasset://../../../shareddata/RiseOfTheKillbots/textures/shotgun_icon.png</url></Content>
+				<bool name="archivable">true</bool>
+			</Properties>
+			<Item class="Script" referent="RBX42">
+				<Properties>
+					<bool name="Disabled">true</bool>
+					<Content name="LinkedSource"><null></null></Content>
+					<string name="Name">Paintball</string>
+					<ProtectedString name="Source">ball = script.Parent
+
+function onTouched(hit)	
+	wait(0.001)
+
+	--[[
+	if hit:getMass() &lt; 1.2 * 200 then
+		hit.BrickColor = ball.BrickColor
+	end]]--
+	-- make a splat
+
+	for i=1,3 do
+		local s = Instance.new(&quot;Part&quot;)
+		s.Name = &quot;Shrapnel&quot; 
+		s.Shape = 1 -- block
+		s.formFactor = 2 -- plate
+		s.Size = Vector3.new(1,.4,1)
+		s.BrickColor = ball.BrickColor
+		local v = Vector3.new(math.random(-1,1), math.random(0,1), math.random(-1,1))
+		s.Velocity = 15 * v
+		s.CFrame = CFrame.new(ball.Position + v, v)
+		ball.BrickCleanup:clone().Parent = s
+		s.BrickCleanup.Disabled = false
+		s.Parent = game.Workspace	
+	end
+
+	connection:disconnect()
+	ball.Parent = nil
+end
+
+function tagHumanoid(humanoid)
+	-- todo: make tag expire
+	local tag = ball:findFirstChild(&quot;creator&quot;)
+	if tag ~= nil then
+		local new_tag = tag:clone()
+		new_tag.Parent = humanoid
+	end
+end
+
+
+function untagHumanoid(humanoid)
+	if humanoid ~= nil then
+		local tag = humanoid:findFirstChild(&quot;creator&quot;)
+		if tag ~= nil then
+			tag.Parent = nil
+		end
+	end
+end
+
+connection = ball.Touched:connect(onTouched)
+
+wait(8)
+ball.Parent = nil
+</ProtectedString>
+					<bool name="archivable">true</bool>
+				</Properties>
+			</Item>
+			<Item class="LocalScript" referent="RBX43">
+				<Properties>
+					<bool name="Disabled">false</bool>
+					<Content name="LinkedSource"><null></null></Content>
+					<string name="Name">Mouselcon</string>
+					<ProtectedString name="Source">local MOUSE_ICON = &apos;rbxasset://textures/GunCursor.png&apos;
+local RELOADING_ICON = &apos;rbxasset://textures/GunWaitCursor.png&apos;
+
+local Tool = script.Parent
+
+local Mouse = nil
+
+local function UpdateIcon()
+	if Mouse then
+		Mouse.Icon = Tool.Enabled and MOUSE_ICON or RELOADING_ICON
+	end
+end
+
+local function OnEquipped(mouse)
+	Mouse = mouse
+	UpdateIcon()
+end
+
+local function OnChanged(property)
+	if property == &apos;Enabled&apos; then
+		UpdateIcon()
+	end
+end
+
+Tool.Equipped:connect(OnEquipped)
+Tool.Changed:connect(OnChanged)
+</ProtectedString>
+					<bool name="archivable">true</bool>
+				</Properties>
+			</Item>
+			<Item class="Script" referent="RBX44">
+				<Properties>
+					<bool name="Disabled">false</bool>
+					<Content name="LinkedSource"><null></null></Content>
+					<string name="Name">PaintballShooter</string>
+					<ProtectedString name="Source">Tool = script.Parent
+
+function fire(v)
+
+	Tool.Handle.Fire:play()
+	
+for i=1,5 do
+	local vCharacter = Tool.Parent
+	local vPlayer = game.Players:playerFromCharacter(vCharacter)
+
+	local missile = Instance.new(&quot;Part&quot;)
+	local spawnPos = vCharacter.PrimaryPart.Position
+	spawnPos  = spawnPos + (v * 8)
+	local spreadamount = 3
+	local spread = Vector3.new(math.random(-spreadamount,spreadamount), math.random(-spreadamount,spreadamount), math.random(-spreadamount,spreadamount))
+
+	missile.Position = spawnPos 
+	missile.Size = Vector3.new(1,1,1)
+	missile.Velocity = v * 350
+	missile.CFrame = CFrame.new(missile.Position + spread, spread)
+	missile.BrickColor = BrickColor.new(26)
+	missile.Shape = 0
+	missile.BottomSurface = 0
+	missile.TopSurface = 0
+	missile.Name = &quot;Pellet&quot;
+	missile.Elasticity = 0
+	missile.Reflectance = 0
+	missile.Friction = 1
+	missile.CanCollide = false
+
+	local force = Instance.new(&quot;BodyForce&quot;)
+	force.force = Vector3.new(0,102.7,0)
+	force.Parent = missile
+
+	local damage = Instance.new(&quot;NumberValue&quot;)
+	damage.Name = &quot;Damage&quot;
+	damage.Value = 20 + math.random(0,4)
+	damage.Parent = missile
+	
+	Tool.BrickCleanup:clone().Parent = missile
+	missile.BrickCleanup.Disabled = false
+
+	--[[local new_script = script.Parent.Paintball:clone()
+	new_script.Disabled = false
+	new_script.Parent = missile]]--
+
+	local creator_tag = Instance.new(&quot;ObjectValue&quot;)
+	creator_tag.Value = vPlayer
+	creator_tag.Name = &quot;creator&quot;
+	creator_tag.Parent = missile
+	
+	
+
+	missile.Parent = game.Workspace
+end
+
+end
+
+Tool.Enabled = true
+function onActivated()
+
+	if not Tool.Enabled then
+		return
+	end
+
+	Tool.Enabled = false
+
+	local character = Tool.Parent;
+	local humanoid = character.Humanoid
+	if humanoid == nil then
+		print(&quot;Humanoid not found&quot;)
+		return 
+	end
+
+	local targetPos = humanoid.TargetPoint
+	local lookAt = (targetPos - character.Head.Position).unit
+
+	fire(lookAt)
+	wait(1)
+
+	Tool.Enabled = true
+end
+
+
+script.Parent.Activated:connect(onActivated)
+</ProtectedString>
+					<bool name="archivable">true</bool>
+				</Properties>
+			</Item>
+			<Item class="Script" referent="RBX45">
+				<Properties>
+					<bool name="Disabled">true</bool>
+					<Content name="LinkedSource"><null></null></Content>
+					<string name="Name">BrickCleanup</string>
+					<ProtectedString name="Source">-- this script removes its parent from the workspace after 120 seconds
+
+wait(15)
+script.Parent.Parent = nil</ProtectedString>
+					<bool name="archivable">true</bool>
+				</Properties>
+			</Item>
+			<Item class="Part" referent="RBX46">
+				<Properties>
+					<bool name="Anchored">false</bool>
+					<float name="BackParamA">-0.5</float>
+					<float name="BackParamB">0.5</float>
+					<token name="BackSurface">0</token>
+					<token name="BackSurfaceInput">0</token>
+					<float name="BottomParamA">-0.5</float>
+					<float name="BottomParamB">0.5</float>
+					<token name="BottomSurface">0</token>
+					<token name="BottomSurfaceInput">0</token>
+					<int name="BrickColor">194</int>
+					<CoordinateFrame name="CFrame">
+						<X>0.434713304</X>
+						<Y>5.19890928</Y>
+						<Z>51.0338974</Z>
+						<R00>0.765911818</R00>
+						<R01>-0.030124668</R01>
+						<R02>-0.642238379</R02>
+						<R10>0.0399680249</R10>
+						<R11>0.999200642</R11>
+						<R12>0.000796274282</R12>
+						<R20>0.641700983</R20>
+						<R21>-0.0262788739</R21>
+						<R22>0.766503751</R22>
+					</CoordinateFrame>
+					<bool name="CanCollide">false</bool>
+					<bool name="DraggingV1">false</bool>
+					<float name="Elasticity">0.5</float>
+					<token name="FormFactor">0</token>
+					<float name="Friction">0.300000012</float>
+					<float name="FrontParamA">-0.5</float>
+					<float name="FrontParamB">0.5</float>
+					<token name="FrontSurface">0</token>
+					<token name="FrontSurfaceInput">0</token>
+					<float name="LeftParamA">-0.5</float>
+					<float name="LeftParamB">0.5</float>
+					<token name="LeftSurface">0</token>
+					<token name="LeftSurfaceInput">0</token>
+					<bool name="Locked">false</bool>
+					<token name="Material">256</token>
+					<string name="Name">Handle</string>
+					<float name="Reflectance">0</float>
+					<float name="RightParamA">-0.5</float>
+					<float name="RightParamB">0.5</float>
+					<token name="RightSurface">0</token>
+					<token name="RightSurfaceInput">0</token>
+					<Vector3 name="RotVelocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<float name="TopParamA">-0.5</float>
+					<float name="TopParamB">0.5</float>
+					<token name="TopSurface">0</token>
+					<token name="TopSurfaceInput">0</token>
+					<float name="Transparency">0</float>
+					<Vector3 name="Velocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<bool name="archivable">true</bool>
+					<token name="shape">1</token>
+					<Vector3 name="size">
+						<X>1</X>
+						<Y>1</Y>
+						<Z>2</Z>
+					</Vector3>
+				</Properties>
+				<Item class="SpecialMesh" referent="RBX47">
+					<Properties>
+						<token name="LODX">2</token>
+						<token name="LODY">2</token>
+						<Content name="MeshId"><url>rbxasset://../../../shareddata/RiseOfTheKillbots/fonts/Shotgun.mesh</url></Content>
+						<token name="MeshType">5</token>
+						<string name="Name">Mesh</string>
+						<Vector3 name="Offset">
+							<X>0</X>
+							<Y>0</Y>
+							<Z>0</Z>
+						</Vector3>
+						<Vector3 name="Scale">
+							<X>1</X>
+							<Y>1</Y>
+							<Z>1</Z>
+						</Vector3>
+						<Content name="TextureId"><url>rbxasset://../../../shareddata/RiseOfTheKillbots/textures/Shotgun.png</url></Content>
+						<Vector3 name="VertexColor">
+							<X>97</X>
+							<Y>97</Y>
+							<Z>97</Z>
+						</Vector3>
+						<bool name="archivable">true</bool>
+					</Properties>
+				</Item>
+				<Item class="Sound" referent="RBX48">
+					<Properties>
+						<bool name="Looped">false</bool>
+						<string name="Name">Fire</string>
+						<float name="Pitch">1</float>
+						<int name="PlayCount">-1</int>
+						<bool name="PlayOnRemove">false</bool>
+						<Content name="SoundId"><url>rbxasset://../../../shareddata/RiseOfTheKillbots/sounds/shotgun_fire.wav</url></Content>
+						<float name="Volume">0.5</float>
+						<bool name="archivable">true</bool>
+					</Properties>
+				</Item>
+			</Item>
+		</Item>
+		<Item class="Tool" referent="RBX49">
+			<Properties>
+				<bool name="Enabled">true</bool>
+				<CoordinateFrame name="Grip">
+					<X>-1</X>
+					<Y>-0.75</Y>
+					<Z>0.25</Z>
+					<R00>0</R00>
+					<R01>0</R01>
+					<R02>1</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>-0</R12>
+					<R20>-1</R20>
+					<R21>0</R21>
+					<R22>-0</R22>
+				</CoordinateFrame>
+				<string name="Name">RPG</string>
+				<Content name="TextureId"><url>rbxasset://Textures/Rocket.png</url></Content>
+				<bool name="archivable">true</bool>
+			</Properties>
+			<Item class="Part" referent="RBX50">
+				<Properties>
+					<bool name="Anchored">false</bool>
+					<float name="BackParamA">-0.5</float>
+					<float name="BackParamB">0.5</float>
+					<token name="BackSurface">0</token>
+					<token name="BackSurfaceInput">0</token>
+					<float name="BottomParamA">-0.5</float>
+					<float name="BottomParamB">0.5</float>
+					<token name="BottomSurface">0</token>
+					<token name="BottomSurfaceInput">0</token>
+					<int name="BrickColor">199</int>
+					<CoordinateFrame name="CFrame">
+						<X>-205.5</X>
+						<Y>12.8000002</Y>
+						<Z>-449</Z>
+						<R00>-0</R00>
+						<R01>0</R01>
+						<R02>1</R02>
+						<R10>-0</R10>
+						<R11>1</R11>
+						<R12>0</R12>
+						<R20>-1</R20>
+						<R21>0</R21>
+						<R22>0</R22>
+					</CoordinateFrame>
+					<bool name="CanCollide">true</bool>
+					<bool name="DraggingV1">false</bool>
+					<float name="Elasticity">0.5</float>
+					<token name="FormFactor">2</token>
+					<float name="Friction">0.300000012</float>
+					<float name="FrontParamA">-0.5</float>
+					<float name="FrontParamB">0.5</float>
+					<token name="FrontSurface">0</token>
+					<token name="FrontSurfaceInput">0</token>
+					<float name="LeftParamA">-0.5</float>
+					<float name="LeftParamB">0.5</float>
+					<token name="LeftSurface">0</token>
+					<token name="LeftSurfaceInput">0</token>
+					<bool name="Locked">false</bool>
+					<token name="Material">256</token>
+					<string name="Name">Handle</string>
+					<float name="Reflectance">0.400000006</float>
+					<float name="RightParamA">-0.5</float>
+					<float name="RightParamB">0.5</float>
+					<token name="RightSurface">0</token>
+					<token name="RightSurfaceInput">0</token>
+					<Vector3 name="RotVelocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<float name="TopParamA">-0.5</float>
+					<float name="TopParamB">0.5</float>
+					<token name="TopSurface">0</token>
+					<token name="TopSurfaceInput">0</token>
+					<float name="Transparency">0</float>
+					<Vector3 name="Velocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<bool name="archivable">true</bool>
+					<token name="shape">1</token>
+					<Vector3 name="size">
+						<X>4</X>
+						<Y>0.800000012</Y>
+						<Z>1</Z>
+					</Vector3>
+				</Properties>
+				<Item class="SpecialMesh" referent="RBX51">
+					<Properties>
+						<token name="LODX">2</token>
+						<token name="LODY">2</token>
+						<Content name="MeshId"><url>rbxasset://fonts/rocketlauncher.mesh</url></Content>
+						<token name="MeshType">5</token>
+						<string name="Name">Mesh</string>
+						<Vector3 name="Offset">
+							<X>0</X>
+							<Y>0</Y>
+							<Z>0</Z>
+						</Vector3>
+						<Vector3 name="Scale">
+							<X>0.75</X>
+							<Y>0.75</Y>
+							<Z>0.75</Z>
+						</Vector3>
+						<Content name="TextureId"><url>rbxasset://textures/rocketlaunchertex.png</url></Content>
+						<Vector3 name="VertexColor">
+							<X>1</X>
+							<Y>1</Y>
+							<Z>1</Z>
+						</Vector3>
+						<bool name="archivable">true</bool>
+					</Properties>
+				</Item>
+			</Item>
+			<Item class="LocalScript" referent="RBX52">
+				<Properties>
+					<bool name="Disabled">false</bool>
+					<Content name="LinkedSource"><null></null></Content>
+					<string name="Name">Local Gui</string>
+					<ProtectedString name="Source">local MOUSE_ICON = &apos;rbxasset://textures/GunCursor.png&apos;
+local RELOADING_ICON = &apos;rbxasset://textures/GunWaitCursor.png&apos;
+
+local Tool = script.Parent
+
+local Mouse = nil
+
+local function UpdateIcon()
+	if Mouse then
+		Mouse.Icon = Tool.Enabled and MOUSE_ICON or RELOADING_ICON
+	end
+end
+
+local function OnEquipped(mouse)
+	Mouse = mouse
+	UpdateIcon()
+end
+
+local function OnChanged(property)
+	if property == &apos;Enabled&apos; then
+		UpdateIcon()
+	end
+end
+
+Tool.Equipped:connect(OnEquipped)
+Tool.Changed:connect(OnChanged)</ProtectedString>
+					<bool name="archivable">true</bool>
+				</Properties>
+			</Item>
+			<Item class="Sound" referent="RBX53">
+				<Properties>
+					<bool name="Looped">false</bool>
+					<string name="Name">Explosion</string>
+					<float name="Pitch">1</float>
+					<int name="PlayCount">-1</int>
+					<bool name="PlayOnRemove">false</bool>
+					<Content name="SoundId"><url>rbxasset://sounds/collide.wav</url></Content>
+					<float name="Volume">1</float>
+					<bool name="archivable">true</bool>
+				</Properties>
+			</Item>
+			<Item class="Sound" referent="RBX54">
+				<Properties>
+					<bool name="Looped">true</bool>
+					<string name="Name">Swoosh</string>
+					<float name="Pitch">1</float>
+					<int name="PlayCount">-1</int>
+					<bool name="PlayOnRemove">false</bool>
+					<Content name="SoundId"><url>rbxasset://sounds/Rocket whoosh 01.wav</url></Content>
+					<float name="Volume">0.699999988</float>
+					<bool name="archivable">true</bool>
+				</Properties>
+			</Item>
+			<Item class="Script" referent="RBX55">
+				<Properties>
+					<bool name="Disabled">true</bool>
+					<Content name="LinkedSource"><null></null></Content>
+					<string name="Name">RocketScript</string>
+					<ProtectedString name="Source">r = game:service(&quot;RunService&quot;)
+
+shaft = script.Parent
+position = shaft.Position
+
+local explod = Instance.new(&quot;Part&quot;)
+explod.Name = &quot;BombExplosion&quot; 
+explod.Shape = 0
+explod.BottomSurface = 0
+explod.TopSurface = 0
+explod.BrickColor = BrickColor.New(21)
+explod.Transparency = 1
+explod.Size = Vector3.new(8,8,8)
+explod.Locked = true
+explod.Anchored = true
+explod.CanCollide = false
+
+local damage = Instance.new(&quot;NumberValue&quot;)
+damage.Name = &quot;Damage&quot;
+damage.Value = 65 + math.random(0,10)
+damage.Parent = explod
+
+script.Parent.Explosion.PlayOnRemove = true -- play explosion sound when projectile removed from game
+
+function fly()
+	direction = shaft.CFrame.lookVector 
+	position = position + direction
+	error = position - shaft.Position
+	shaft.Velocity = 20*error
+end
+
+function blow()
+	local gibPart = explod:clone()
+	gibPart.Position = script.Parent.Position
+	gibPart.Parent = game.Workspace
+	swoosh:stop()
+	explosion = Instance.new(&quot;Explosion&quot;)
+	explosion.Position = shaft.Position
+
+	-- find instigator tag
+	local creator = script.Parent:findFirstChild(&quot;creator&quot;)
+	if creator ~= nil then
+		explosion.Hit:connect(function(part, distance)  onPlayerBlownUp(part, distance, creator) end)
+	end
+
+	explosion.Parent = game.Workspace
+	connection:disconnect()
+	wait(0.1)
+	shaft:remove()
+	gibPart.Parent = nil
+end
+
+function onPlayerBlownUp(part, distance, creator)
+	
+	if part.Name == &quot;Head&quot; then
+	
+		local humanoid = part.Parent.Humanoid
+		tagHumanoid(humanoid, creator)
+	end
+end
+
+function tagHumanoid(humanoid, creator)
+	-- tag does not need to expire iff all explosions lethal
+	
+	if creator ~= nil then
+		local new_tag = creator:clone()
+		new_tag.Parent = humanoid
+		
+	end
+end
+
+function untagHumanoid(humanoid)
+	if humanoid ~= nil then
+		local tag = humanoid:findFirstChild(&quot;creator&quot;)
+		if tag ~= nil then
+		
+			tag.Parent = nil
+		end
+	end
+end
+
+t, s = r.Stepped:wait()
+
+swoosh = script.Parent.Swoosh
+swoosh:play()
+
+d = t + 10.0 - s
+connection = shaft.Touched:connect(blow)
+
+while t &lt; d do
+	fly()
+	t = r.Stepped:wait()
+end
+
+-- at max range
+script.Parent.Explosion.PlayOnRemove = false
+swoosh:stop()
+shaft:remove()
+</ProtectedString>
+					<bool name="archivable">true</bool>
+				</Properties>
+			</Item>
+			<Item class="Script" referent="RBX56">
+				<Properties>
+					<bool name="Disabled">false</bool>
+					<Content name="LinkedSource"><null></null></Content>
+					<string name="Name">Server Launcher</string>
+					<ProtectedString name="Source">local Rocket = Instance.new(&quot;Part&quot;)
+local Tool = script.Parent
+
+Rocket.Locked = true
+Rocket.BackSurface = 3
+Rocket.BottomSurface = 3
+Rocket.FrontSurface = 3
+Rocket.LeftSurface = 3
+Rocket.RightSurface = 3
+Rocket.TopSurface = 3
+Rocket.Size = Vector3.new(1,1,4)
+Rocket.BrickColor = BrickColor.new(23)
+
+Tool.RocketScript:clone().Parent = Rocket
+Tool.Explosion:clone().Parent = Rocket
+Tool.Swoosh:clone().Parent = Rocket
+
+function fire(vTarget)
+
+	local vCharacter = Tool.Parent;
+	
+	local vHandle = Tool:findFirstChild(&quot;Handle&quot;)
+	if vHandle == nil then
+		print(&quot;Handle not found&quot;)
+		return 
+	end
+
+	local dir = vTarget - vHandle.Position
+
+	dir = computeDirection(dir)
+
+	local missile = Rocket:clone()
+
+	local pos = vHandle.Position + (dir * 6)
+	
+	--missile.Position = pos
+	missile.CFrame = CFrame.new(pos,  pos + dir)
+
+	local creator_tag = Instance.new(&quot;ObjectValue&quot;)
+
+	creator_tag.Value =vPlayer
+	creator_tag.Name = &quot;creator&quot;
+	creator_tag.Parent = missile
+	
+	missile.RocketScript.Disabled = false
+
+	missile.Parent = game.Workspace
+end
+
+function computeDirection(vec)
+	local lenSquared = vec.magnitude * vec.magnitude
+	local invSqrt = 1 / math.sqrt(lenSquared)
+	return Vector3.new(vec.x * invSqrt, vec.y * invSqrt, vec.z * invSqrt)
+end
+
+Tool.Enabled = true
+function onActivated()
+	if not Tool.Enabled then
+		return
+	end
+
+	Tool.Enabled = false
+
+	local character = Tool.Parent;
+	local humanoid = character.Humanoid
+	if humanoid == nil then
+		print(&quot;Humanoid not found&quot;)
+		return 
+	end
+
+	local targetPos = humanoid.TargetPoint
+
+	fire(targetPos)
+
+	wait(1.5)
+
+	Tool.Enabled = true
+end
+
+
+script.Parent.Activated:connect(onActivated)
+
+</ProtectedString>
+					<bool name="archivable">true</bool>
+				</Properties>
+			</Item>
+		</Item>
+		<Item class="Tool" referent="RBX57">
+			<Properties>
+				<bool name="Enabled">true</bool>
+				<CoordinateFrame name="Grip">
+					<X>0</X>
+					<Y>-1.29999995</Y>
+					<Z>0</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<string name="Name">Trowel</string>
+				<Content name="TextureId"><url>rbxasset://Textures/Wall.png</url></Content>
+				<bool name="archivable">true</bool>
+			</Properties>
+			<Item class="Script" referent="RBX58">
+				<Properties>
+					<bool name="Disabled">false</bool>
+					<Content name="LinkedSource"><null></null></Content>
+					<string name="Name">WallMaker</string>
+					<ProtectedString name="Source">local wallHeight = 20
+
+local brickSpeed = 15
+local wallWidth = 20
+local brickNum = 85
+local brickNumCur = 0
+
+local Tool = script.Parent
+
+
+-- places a brick at pos and returns the position of the brick&apos;s opposite corner
+function placeBrick(cf, pos, color)
+	local brick = Instance.new(&quot;Part&quot;)
+	brick.BrickColor = color
+	brick.CFrame = cf * CFrame.new(pos + brick.Size / 2)
+	script.Parent.BrickCleanup:clone().Parent = brick -- attach cleanup script to this brick
+	brick.BrickCleanup.Disabled = false
+	brick.Parent = game.Workspace
+	brick:makeJoints()
+	return  brick, pos +  brick.Size
+end
+
+function buildWall(cf)
+
+	local color = BrickColor.random()
+	local bricks = {}
+
+	assert(wallWidth&gt;0)
+	local y = 0
+	while y &lt; wallHeight do
+		local p
+		local x = -wallWidth/2
+		while x &lt; wallWidth/2 do
+			local brick
+			brick, p = placeBrick(cf, Vector3.new(x, y, 0), color)
+			x = p.x
+			table.insert(bricks, brick)
+			brickNumCur = brickNumCur + 1
+			print(brickNumCur)
+			wait(brickSpeed/10000)
+		end
+		y = p.y
+	end
+	return bricks
+end
+
+
+function snap(v)
+	if math.abs(v.x)&gt;math.abs(v.z) then
+		if v.x&gt;0 then
+			return Vector3.new(1,0,0)
+		else
+			return Vector3.new(-1,0,0)
+		end
+	else
+		if v.z&gt;0 then
+			return Vector3.new(0,0,1)
+		else
+			return Vector3.new(0,0,-1)
+		end
+	end
+end
+
+
+Tool.Enabled = true
+function onActivated()
+
+	if not Tool.Enabled then
+		return
+	end
+
+	Tool.Enabled = false
+
+	local character = Tool.Parent;
+	local humanoid = character.Humanoid
+	if humanoid == nil then
+		print(&quot;Humanoid not found&quot;)
+		return 
+	end
+
+	local targetPos = humanoid.TargetPoint
+	local lookAt = snap( (targetPos - character.Head.Position).unit )
+	local cf = CFrame.new(targetPos, targetPos + lookAt)
+
+	Tool.Handle.BuildSound:play()
+
+	buildWall(cf)
+	
+	if brickNumCur == brickNum then
+		Tool.Enabled = true
+		brickNumCur = 0
+	end
+end
+
+script.Parent.Activated:connect(onActivated)
+
+</ProtectedString>
+					<bool name="archivable">true</bool>
+				</Properties>
+			</Item>
+			<Item class="Script" referent="RBX59">
+				<Properties>
+					<bool name="Disabled">true</bool>
+					<Content name="LinkedSource"><null></null></Content>
+					<string name="Name">BrickCleanup</string>
+					<ProtectedString name="Source">-- this script removes its parent from the workspace after 24 seconds
+
+wait(24)
+script.Parent.Parent = nil
+</ProtectedString>
+					<bool name="archivable">true</bool>
+				</Properties>
+			</Item>
+			<Item class="Part" referent="RBX60">
+				<Properties>
+					<bool name="Anchored">false</bool>
+					<float name="BackParamA">-0.5</float>
+					<float name="BackParamB">0.5</float>
+					<token name="BackSurface">2</token>
+					<token name="BackSurfaceInput">0</token>
+					<float name="BottomParamA">-0.5</float>
+					<float name="BottomParamB">0.5</float>
+					<token name="BottomSurface">4</token>
+					<token name="BottomSurfaceInput">0</token>
+					<int name="BrickColor">5</int>
+					<CoordinateFrame name="CFrame">
+						<X>-208.5</X>
+						<Y>12.9000006</Y>
+						<Z>-445.200012</Z>
+						<R00>1</R00>
+						<R01>-0</R01>
+						<R02>0</R02>
+						<R10>0</R10>
+						<R11>-0</R11>
+						<R12>1</R12>
+						<R20>0</R20>
+						<R21>-1</R21>
+						<R22>0</R22>
+					</CoordinateFrame>
+					<bool name="CanCollide">true</bool>
+					<bool name="DraggingV1">false</bool>
+					<float name="Elasticity">0.5</float>
+					<token name="FormFactor">2</token>
+					<float name="Friction">0.300000012</float>
+					<float name="FrontParamA">-0.5</float>
+					<float name="FrontParamB">0.5</float>
+					<token name="FrontSurface">2</token>
+					<token name="FrontSurfaceInput">0</token>
+					<float name="LeftParamA">-0.5</float>
+					<float name="LeftParamB">0.5</float>
+					<token name="LeftSurface">0</token>
+					<token name="LeftSurfaceInput">0</token>
+					<bool name="Locked">false</bool>
+					<token name="Material">256</token>
+					<string name="Name">Handle</string>
+					<float name="Reflectance">0</float>
+					<float name="RightParamA">-0.5</float>
+					<float name="RightParamB">0.5</float>
+					<token name="RightSurface">0</token>
+					<token name="RightSurfaceInput">0</token>
+					<Vector3 name="RotVelocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<float name="TopParamA">-0.5</float>
+					<float name="TopParamB">0.5</float>
+					<token name="TopSurface">3</token>
+					<token name="TopSurfaceInput">0</token>
+					<float name="Transparency">0</float>
+					<Vector3 name="Velocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<bool name="archivable">true</bool>
+					<token name="shape">1</token>
+					<Vector3 name="size">
+						<X>1</X>
+						<Y>4.4000001</Y>
+						<Z>1</Z>
+					</Vector3>
+				</Properties>
+				<Item class="SpecialMesh" referent="RBX61">
+					<Properties>
+						<token name="LODX">2</token>
+						<token name="LODY">2</token>
+						<Content name="MeshId"><url>rbxasset://fonts/trowel.mesh</url></Content>
+						<token name="MeshType">5</token>
+						<string name="Name">Mesh</string>
+						<Vector3 name="Offset">
+							<X>0</X>
+							<Y>0</Y>
+							<Z>0</Z>
+						</Vector3>
+						<Vector3 name="Scale">
+							<X>1</X>
+							<Y>1</Y>
+							<Z>1</Z>
+						</Vector3>
+						<Content name="TextureId"><url>rbxasset://textures/TrowelTexture.png</url></Content>
+						<Vector3 name="VertexColor">
+							<X>1</X>
+							<Y>1</Y>
+							<Z>1</Z>
+						</Vector3>
+						<bool name="archivable">true</bool>
+					</Properties>
+				</Item>
+				<Item class="Sound" referent="RBX62">
+					<Properties>
+						<bool name="Looped">false</bool>
+						<string name="Name">BuildSound</string>
+						<float name="Pitch">1</float>
+						<int name="PlayCount">-1</int>
+						<bool name="PlayOnRemove">false</bool>
+						<Content name="SoundId"><url>rbxasset://sounds//bass.wav</url></Content>
+						<float name="Volume">1</float>
+						<bool name="archivable">true</bool>
+					</Properties>
+				</Item>
+			</Item>
+			<Item class="LocalScript" referent="RBX63">
+				<Properties>
+					<bool name="Disabled">false</bool>
+					<Content name="LinkedSource"><null></null></Content>
+					<string name="Name">Mouselcon</string>
+					<ProtectedString name="Source">local MOUSE_ICON = &apos;rbxasset://textures/GunCursor.png&apos;
+local RELOADING_ICON = &apos;rbxasset://textures/GunWaitCursor.png&apos;
+
+local Tool = script.Parent
+
+local Mouse = nil
+
+local function UpdateIcon()
+	if Mouse then
+		Mouse.Icon = Tool.Enabled and MOUSE_ICON or RELOADING_ICON
+	end
+end
+
+local function OnEquipped(mouse)
+	Mouse = mouse
+	UpdateIcon()
+end
+
+local function OnChanged(property)
+	if property == &apos;Enabled&apos; then
+		UpdateIcon()
+	end
+end
+
+Tool.Equipped:connect(OnEquipped)
+Tool.Changed:connect(OnChanged)
+</ProtectedString>
+					<bool name="archivable">true</bool>
+				</Properties>
+			</Item>
+		</Item>
+		<Item class="HopperBin" referent="RBX64">
+			<Properties>
+				<bool name="Active">false</bool>
+				<token name="BinType">0</token>
+				<string name="Name">JetBoots</string>
+				<Content name="TextureId"><url>rbxasset://Textures/Rocketboots.png</url></Content>
+				<bool name="archivable">true</bool>
+			</Properties>
+			<Item class="Script" referent="RBX65">
+				<Properties>
+					<bool name="Disabled">false</bool>
+					<Content name="LinkedSource"><null></null></Content>
+					<string name="Name">Jetboots</string>
+					<ProtectedString name="Source">print(&quot;Jet Boots loaded&quot;)
+
+bin = script.Parent
+
+walking = false
+
+local thrust = Instance.new(&quot;BodyVelocity&quot;)
+local velocity = 0
+local max_velocity = 35
+
+
+
+function onStart()
+	print(&quot;start walking&quot;)
+	walking = true
+	
+	thrust.Parent = game.Players.LocalPlayer.Character.PrimaryPart
+	
+	thrust.velocity = Vector3.new(0,velocity,0)
+	thrust.maxForce = Vector3.new(0,math.huge,0)   
+	
+	local sound = game.Players.LocalPlayer.Character.PrimaryPart:findFirstChild(&quot;JetbootSound&quot;)
+	if sound == nil then 
+		sound = Instance.new(&quot;Sound&quot;)
+		sound.Name = &quot;JetbootSound&quot;
+		sound.SoundId = &quot;rbxasset://sounds\\Rocket whoosh 01.wav&quot;
+		sound.Looped = true
+		sound.Parent = game.Players.LocalPlayer.Character.PrimaryPart
+	end
+	sound:play()
+
+end
+
+function onEnd()
+	print(&quot;stop walking&quot;)
+	walking = false
+	thrust.Parent = nil
+	local sound = game.Players.LocalPlayer.Character.PrimaryPart:findFirstChild(&quot;JetbootSound&quot;)
+	if sound ~= nil then sound:stop() end
+end
+
+function onButton1Down(mouse)
+	if walking == true then return end
+	
+	onStart()
+	
+	while walking == true do
+		--onWalk()
+		wait(.2)
+		velocity = max_velocity + 3 
+		thrust.velocity = Vector3.new(0,velocity,0)
+	end
+end
+
+function onButton1Up(mouse)
+	onEnd()
+end
+
+function onSelected(mouse)
+	print(&quot;ghostwalker selected&quot;)
+	mouse.Icon = &quot;rbxasset://textures\\GunCursor.png&quot;
+	mouse.Button1Down:connect(function() onButton1Down(mouse) end)
+	mouse.Button1Up:connect(function() onButton1Up(mouse) end)
+end
+
+bin.Selected:connect(onSelected)
+
+
+
+
+</ProtectedString>
+					<bool name="archivable">true</bool>
+				</Properties>
+			</Item>
+		</Item>
+	</Item>
+	<Item class="StarterGui" referent="RBX66">
+		<Properties>
+			<string name="Name">StarterGui</string>
+			<bool name="ShowDevelopmentGui">true</bool>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="SoundService" referent="RBX67">
+		<Properties>
+			<token name="AmbientReverb">0</token>
+			<float name="DistanceFactor">10</float>
+			<float name="DopplerScale">1</float>
+			<string name="Name">Soundscape</string>
+			<float name="RolloffScale">1</float>
+			<bool name="archivable">true</bool>
+		</Properties>
+		<External>RBX68</External>
+		<External>RBX69</External>
+		<External>RBX70</External>
+		<External>RBX71</External>
+		<External>RBX72</External>
+		<External>RBX73</External>
+		<External>RBX74</External>
+		<External>RBX75</External>
+		<External>RBX76</External>
+		<External>RBX77</External>
+		<External>RBX78</External>
+		<External>RBX79</External>
+		<External>RBX80</External>
+		<External>RBX81</External>
+	</Item>
+	<Item class="PhysicsService" referent="RBX82">
+		<Properties>
+			<string name="Name">PhysicsService</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="BadgeService" referent="RBX83">
+		<Properties>
+			<string name="Name">BadgeService</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="Geometry" referent="RBX84">
+		<Properties>
+			<string name="Name">Geometry</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<External>RBX85</External>
+	<Item class="Debris" referent="RBX86">
+		<Properties>
+			<int name="MaxItems">1000</int>
+			<string name="Name">Debris</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="Timer" referent="RBX87">
+		<Properties>
+			<string name="Name">Instance</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="ScriptInformationProvider" referent="RBX88">
+		<Properties>
+			<string name="Name">Instance</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<External>RBX89</External>
+	<Item class="Selection" referent="RBX90">
+		<Properties>
+			<string name="Name">Selection</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<External>RBX91</External>
+	<External>RBX92</External>
+	<Item class="Lighting" referent="RBX93">
+		<Properties>
+			<Color3 name="Ambient">4286743170</Color3>
+			<float name="Brightness">1</float>
+			<Color3 name="ColorShift_Bottom">4279908608</Color3>
+			<Color3 name="ColorShift_Top">4279908608</Color3>
+			<float name="GeographicLatitude">41.7332993</float>
+			<string name="Name">Lighting</string>
+			<Color3 name="ShadowColor">4290164411</Color3>
+			<string name="TimeOfDay">14:00:00</string>
+			<Color3 name="BottomAmbientV9">4281558528</Color3>
+			<Color3 name="ClearColor">4278190080</Color3>
+			<Color3 name="SpotLightV9">4294046193</Color3>
+			<Color3 name="TopAmbientV9">4287927444</Color3>
+			<bool name="archivable">true</bool>
+		</Properties>
+		<Item class="NumberValue" referent="RBX94">
+			<Properties>
+				<string name="Name">Wave</string>
+				<double name="Value">0</double>
+				<bool name="archivable">true</bool>
+			</Properties>
+		</Item>
+		<Item class="NumberValue" referent="RBX95">
+			<Properties>
+				<string name="Name">EnemyCount</string>
+				<double name="Value">0</double>
+				<bool name="archivable">true</bool>
+			</Properties>
+		</Item>
+		<Item class="BoolValue" referent="RBX96">
+			<Properties>
+				<string name="Name">WaveStarted</string>
+				<bool name="Value">false</bool>
+				<bool name="archivable">true</bool>
+			</Properties>
+		</Item>
+		<Item class="NumberValue" referent="RBX97">
+			<Properties>
+				<string name="Name">DefaultEnemyCount</string>
+				<double name="Value">9</double>
+				<bool name="archivable">true</bool>
+			</Properties>
+		</Item>
+		<Item class="Model" referent="RBX98">
+			<Properties>
+				<CoordinateFrame name="ModelInPrimary">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<string name="Name">Killbot</string>
+				<Ref name="PrimaryPart">RBX99</Ref>
+				<bool name="archivable">true</bool>
+			</Properties>
+			<Item class="Script" referent="RBX100">
+				<Properties>
+					<bool name="Disabled">false</bool>
+					<Content name="LinkedSource"><null></null></Content>
+					<string name="Name">KillbotScript</string>
+					<ProtectedString name="Source">--CHANGE THESE IF YOU WANT TO BALANCE THE GAME ACCORDING TO HOW LARGE YOUR MAP IS.
+local minwaveforheavy = 2
+local minwaveforagility = 4
+local minwaveforcommander = 10
+local commanderrarity = 5
+--DON&apos;T CHANGE ANYTHING BELOW
+
+local sphere = script.Parent.Head
+
+pcall(function() 
+	sphere.Material = &quot;DiamondPlate&quot;
+end)
+
+local myTarget = nil
+
+--wait for heavies
+wait(0.2)
+local speed = 40
+local speedtype = math.random(1,commanderrarity)
+if game.Lighting.WaveNeedsBoss.Value == true then
+speed = 15
+elseif speedtype == 5 and game.Lighting.Wave.Value &gt; minwaveforcommander then
+speed = math.random(15,70)
+else
+speed = math.random(30,70)
+end
+local HPDef = 100
+local unitname = &quot;Grunt&quot;
+local gibsize = Vector3.new(1.3,1.3,1.3)
+if speed &lt; 25 and game.Lighting.WaveNeedsBoss.Value == true then
+unitname = &quot;Prime Commander&quot;
+sphere.Size = Vector3.new(6,6,6)
+sphere.Reflectance = 1
+HPDef = 1500
+gibsize = Vector3.new(2,2,2)
+elseif speed &lt; 25 and game.Lighting.Wave.Value &gt; minwaveforcommander and game.Lighting.WaveNeedsBoss.Value == false then
+unitname = &quot;Commander&quot;
+sphere.Size = Vector3.new(4,4,4)
+sphere.Reflectance = 0.8
+HPDef = 350
+gibsize = Vector3.new(1,1,1)
+elseif speed &gt; 55 and game.Lighting.Wave.Value &gt; minwaveforagility then
+unitname = &quot;Agility&quot;
+sphere.Size = Vector3.new(2,2,2)
+sphere.Reflectance = 0.1
+HPDef = 50
+gibsize = Vector3.new(0.8,0.8,0.8)
+elseif speed &lt; 40 and game.Lighting.Wave.Value &gt; minwaveforheavy then
+unitname = &quot;Heavy&quot;
+sphere.Size = Vector3.new(5,5,5)
+sphere.Reflectance = 0.4
+HPDef = 200
+gibsize = Vector3.new(2,2,2)
+else
+speed = math.random(40,55)
+end
+
+local HP = HPDef
+local id = math.random(2,99999)
+local isOnFire = false
+
+if speed &lt; 25 and game.Lighting.WaveNeedsBoss.Value == true then
+id = 1
+end
+
+script.Parent.Name = &quot;Killbot &quot;..unitname..&quot;&quot;..speed..&quot; Unit #&quot;..id..&quot; | HP: &quot;..HP..&quot;/&quot;..HPDef
+
+local trophism = 80
+
+--wait for heavies
+wait(0.2)
+script.Parent.Humanoid.MaxHealth = HPDef
+script.Parent.Humanoid.Health = HPDef
+
+script.Parent.Death.PlayOnRemove = true 
+
+--give us a color to diferenciate ourselves
+sphere.BrickColor = BrickColor.random()
+
+-- obtain goals based on Sphere part
+sphere.BodyPosition.position = sphere.Position
+
+-- this code hijacked from the new rocket launcher
+local Rocket = Instance.new(&quot;Part&quot;)
+Rocket.Locked = true
+Rocket.BackSurface = 3
+Rocket.BottomSurface = 3
+Rocket.FrontSurface = 3
+Rocket.LeftSurface = 3
+Rocket.RightSurface = 3
+Rocket.TopSurface = 3
+Rocket.Size = Vector3.new(1,1,4)
+Rocket.BrickColor = BrickColor.new(21)
+script.Parent.RocketScript:clone().Parent = Rocket
+script.Parent.Explosion:clone().Parent = Rocket
+script.Parent.Swoosh:clone().Parent = Rocket
+
+local gib = Instance.new(&quot;Part&quot;)
+gib.Name = &quot;KillbotMetal&quot; 
+gib.BackSurface = 0
+gib.BottomSurface = 0
+gib.FrontSurface = 0
+gib.LeftSurface = 0
+gib.RightSurface = 0
+gib.TopSurface = 0
+gib.Shape = 1 -- block
+gib.formFactor = 2 -- plate
+gib.Size = Vector3.new(1,.4,1)
+gib.Reflectance = sphere.Reflectance
+pcall(function() 
+	gib.Material = &quot;DiamondPlate&quot;
+end)
+script.Parent.BrickCleanup:clone().Parent = gib
+
+local gib2 = Instance.new(&quot;Part&quot;)
+gib2.Name = &quot;KillbotGib&quot; 
+gib2.BackSurface = 0
+gib2.BottomSurface = 0
+gib2.FrontSurface = 0
+gib2.LeftSurface = 0
+gib2.RightSurface = 0
+gib2.TopSurface = 0
+gib2.Size = gibsize
+gib2.BrickColor = sphere.BrickColor
+gib2.Reflectance = sphere.Reflectance
+pcall(function() 
+	gib2.Material = &quot;DiamondPlate&quot;
+end)
+script.Parent.BrickCleanup:clone().Parent = gib2
+
+function fire(target)
+	local dir = target - sphere.Position
+	dir = computeDirection(dir)
+	local missile = Rocket:clone()
+
+	local spawnPos = sphere.Position
+
+	local pos = spawnPos + (dir * 8)
+	
+	if speed &lt; 25 and game.Lighting.WaveNeedsBoss.Value == true then
+		local spread = 5
+		local rotation = missile.CFrame - missile.Position
+		missile.CFrame = CFrame.new(pos,  pos + dir) + Vector3.new(math.random(-spread,spread),math.random(-spread,spread),math.random(-spread,spread))
+	else
+		--missile.Position = pos
+		missile.CFrame = CFrame.new(pos,  pos + dir)
+	end
+	missile.RocketScript.Disabled = false
+	missile.Parent = game.Workspace
+end
+
+function computeDirection(vec)
+	local lenSquared = vec.magnitude * vec.magnitude
+	local invSqrt = 1 / math.sqrt(lenSquared)
+	return Vector3.new(vec.x * invSqrt, vec.y * invSqrt, vec.z * invSqrt)
+end
+
+function scanForHumans()
+	-- KILL THE HUMANS!!!!!!!!!!
+
+	-- for now, pick a random one. In the future, pick the closest. Or use hit test to pick a visible one.
+	local humansFound = {}
+
+	local players = game.Players:children()
+
+	if (#players &lt; 1) then return end
+
+	local i = math.random(1, #players)
+
+	myTarget = players[i].Character
+	
+end
+
+function moveKillbot()
+	
+	-- killbots move using a biased random walk toward the target
+	-- they also like to float at least 10 studs above the ground
+
+	local dx = math.random(-100,100)
+	local dy = math.random(-speed,speed)
+	local dz = math.random(-100,100)
+
+	if (sphere.Position.y &lt; 10 and dy &lt; 0) then dy = -dy end
+	if (sphere.Position.y &gt; trophism and dy &gt; 0) then dy = -dy end
+
+	if (myTarget ~= nil and myTarget.Humanoid ~= nil and myTarget.Humanoid.Health &gt; 0 and myTarget:findFirstChild(&quot;Torso&quot;)) then
+		local dir = computeDirection(myTarget.Torso.Position - sphere.Position)
+		dx = dx + (dir.x * trophism) -- change this number to alter player trophism
+		dy = dy + (dir.y * trophism) 
+		dz = dz + (dir.z * trophism)
+	end
+
+	local vec = computeDirection(Vector3.new(dx,dy,dz))
+
+	sphere.BodyPosition.position = sphere.Position + (vec * speed) -- change this number to alter speed
+end
+
+function onTouched(hit)
+	if hit.Parent then
+		local humanoid = hit.Parent:findFirstChild(&quot;Humanoid&quot;)
+		if humanoid~=nil then
+			if hit.Parent:findFirstChild(&quot;IsKillbot&quot;) == nil then
+				humanoid.Health = humanoid.Health - 2000 -- Killbots kill you when you touch them! duh.
+			end
+		else
+			-- sadly, there is no good way to give a killbot hit points, so one hit with any weapon kills them
+			--script.Parent.Parent = nil
+			if HP &gt; 0 then
+				onDamaged(hit)
+			else
+				onKilled(hit)
+			end
+		end
+	end
+end
+
+sphere.Touched:connect(onTouched)
+
+function onDamaged(hit)
+	--todo: make it so we detect if a part has a damage value, if true, it will provide us the hp
+	if hit:findFirstChild(&quot;Damage&quot;) then
+		if hit.Damage.className == &quot;NumberValue&quot; then
+			if speed &lt; 25 and game.Lighting.WaveNeedsBoss.Value == true then
+				HP = HP - (hit.Damage.Value - 7)
+			elseif speed &lt; 25 and game.Lighting.Wave.Value &gt; minwaveforcommander and game.Lighting.WaveNeedsBoss.Value == false then
+				HP = HP - (hit.Damage.Value - 2)
+			else
+				HP = HP - hit.Damage.Value
+			end
+			script.Parent.Humanoid.Health = HP 
+			script.Parent.Name = &quot;Killbot &quot;..unitname..&quot;&quot;..speed..&quot;Unit #&quot;..id..&quot; | HP: &quot;..HP..&quot;/&quot;..HPDef
+			
+			if HP &lt; 30 and isOnFire == false then
+				pcall(function() 
+					local deathfire = Instance.new(&quot;Fire&quot;)
+					deathfire.Size = sphere.Size.x * sphere.Size.y
+					deathfire.Heat = 15
+					deathfire.Parent = sphere
+				end)
+				isOnFire = true
+			end
+
+			for n=1,3 do
+				local dir = sphere.Position
+				local gibPart = gib:clone()
+				if math.random(1,3) == 3 then
+					gib.BrickColor = BrickColor.new(27)
+					gib.Reflectance = 0.4
+				else
+					gib.BrickColor = sphere.BrickColor
+				end
+				gibPart.BrickCleanup.Disabled = false
+				gibPart.Position = Vector3.new(dir.x+math.random(1,10),dir.y + 10,dir.z+math.random(1,10))
+				gibPart.CFrame = CFrame.new(dir,Vector3.new(dir.x+math.random(1,10),dir.y+math.random(1,10),dir.z+math.random(1,10)))
+				gibPart.Parent = game.Workspace
+			end
+			if hit.Damage.Value &lt; 45 then
+			hit = script.Parent.Hit
+			hit:play()
+			else
+			heavy = script.Parent.Hit_Heavy
+			heavy:play()
+			end
+		end
+	end
+end
+
+function onKilled(hit)
+	for n=1,4 do
+			local dir = sphere.Position
+			local gibPart = gib2:clone()
+			gibPart.BrickCleanup.Disabled = false
+			gibPart.Position = Vector3.new(dir.x+math.random(1,10),dir.y + 10,dir.z+math.random(1,10))
+			gibPart.CFrame = CFrame.new(dir,Vector3.new(dir.x+math.random(1,10),dir.y+math.random(1,10),dir.z+math.random(1,10)))
+
+			pcall(function() 
+				local deathfire = Instance.new(&quot;Fire&quot;)
+				deathfire.Size = gibPart.Size.x * gibPart.Size.y
+				deathfire.Heat = 15
+				deathfire.Parent = gibPart
+			end)
+
+			gibPart.Parent = game.Workspace
+	end
+	explosion = Instance.new(&quot;Explosion&quot;)
+	explosion.Position = sphere.Position
+	explosion.Parent = game.Workspace
+	game.Lighting.EnemyCount.Value = game.Lighting.EnemyCount.Value - 1
+	script.Parent:remove()
+end
+
+while true do  -- loop forever
+	scanForHumans()
+	for n=1,5 do
+		if (myTarget ~= nil and myTarget.Humanoid ~= nil and myTarget.Humanoid.Health &gt; 0 and myTarget:findFirstChild(&quot;Torso&quot;)) then
+			local randomval = math.random(1,2)
+			-- speed demons fire faster
+			if speed &lt; 25 and game.Lighting.WaveNeedsBoss.Value == true then
+				randomval = 2
+			elseif speed &lt; 25 and game.Lighting.Wave.Value &gt; minwaveforcommander and game.Lighting.WaveNeedsBoss.Value == false then
+				randomval = 1
+			elseif speed &gt; 55 then
+				randomval = 2
+			end
+
+			if(randomval == 2) then fire(myTarget.Torso.Position) end
+			
+			if speed &lt; 25 and game.Lighting.WaveNeedsBoss.Value == true then
+				wait(1.3)
+			elseif speed &lt; 25 and game.Lighting.Wave.Value &gt; minwaveforcommander and game.Lighting.WaveNeedsBoss.Value == false then
+				wait(1.5)
+			elseif speed &gt; 55 then
+				wait(2)
+			elseif speed &lt; 40 then
+				wait(3)
+			else
+				wait(math.random(1,2))
+			end
+
+			moveKillbot()
+
+			if speed &lt; 25 and game.Lighting.WaveNeedsBoss.Value == true then
+				wait(1.3)
+			elseif speed &lt; 25 and game.Lighting.Wave.Value &gt; minwaveforcommander and game.Lighting.WaveNeedsBoss.Value == false then
+				wait(1.5)
+			elseif speed &gt; 55 then
+				wait(2)
+			elseif speed &lt; 40 then
+				wait(3)
+			else
+				wait(math.random(1,2))
+			end
+		end
+	end
+	wait(1) -- don&apos;t hog CPU
+end
+</ProtectedString>
+					<bool name="archivable">true</bool>
+				</Properties>
+			</Item>
+			<Item class="Part" referent="RBX99">
+				<Properties>
+					<bool name="Anchored">false</bool>
+					<float name="BackParamA">-0.5</float>
+					<float name="BackParamB">0.5</float>
+					<token name="BackSurface">2</token>
+					<token name="BackSurfaceInput">0</token>
+					<float name="BottomParamA">-0.5</float>
+					<float name="BottomParamB">0.5</float>
+					<token name="BottomSurface">2</token>
+					<token name="BottomSurfaceInput">0</token>
+					<int name="BrickColor">1</int>
+					<CoordinateFrame name="CFrame">
+						<X>-55</X>
+						<Y>524</Y>
+						<Z>0</Z>
+						<R00>-1</R00>
+						<R01>0</R01>
+						<R02>-0</R02>
+						<R10>-0</R10>
+						<R11>1</R11>
+						<R12>-0</R12>
+						<R20>-0</R20>
+						<R21>0</R21>
+						<R22>-1</R22>
+					</CoordinateFrame>
+					<bool name="CanCollide">true</bool>
+					<bool name="DraggingV1">false</bool>
+					<float name="Elasticity">0.5</float>
+					<token name="FormFactor">0</token>
+					<float name="Friction">0.300000012</float>
+					<float name="FrontParamA">-0.5</float>
+					<float name="FrontParamB">0.5</float>
+					<token name="FrontSurface">2</token>
+					<token name="FrontSurfaceInput">0</token>
+					<float name="LeftParamA">-0.5</float>
+					<float name="LeftParamB">0.5</float>
+					<token name="LeftSurface">2</token>
+					<token name="LeftSurfaceInput">0</token>
+					<bool name="Locked">false</bool>
+					<token name="Material">256</token>
+					<string name="Name">Head</string>
+					<float name="Reflectance">0.200000003</float>
+					<float name="RightParamA">-0.5</float>
+					<float name="RightParamB">0.5</float>
+					<token name="RightSurface">2</token>
+					<token name="RightSurfaceInput">0</token>
+					<Vector3 name="RotVelocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<float name="TopParamA">-0.5</float>
+					<float name="TopParamB">0.5</float>
+					<token name="TopSurface">2</token>
+					<token name="TopSurfaceInput">0</token>
+					<float name="Transparency">0</float>
+					<Vector3 name="Velocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<bool name="archivable">true</bool>
+					<token name="shape">0</token>
+					<Vector3 name="size">
+						<X>4</X>
+						<Y>4</Y>
+						<Z>4</Z>
+					</Vector3>
+				</Properties>
+				<Item class="BodyPosition" referent="RBX101">
+					<Properties>
+						<float name="D">10000</float>
+						<string name="Name">BodyPosition</string>
+						<float name="P">10000</float>
+						<bool name="archivable">true</bool>
+						<Vector3 name="maxForce">
+							<X>4000</X>
+							<Y>400000</Y>
+							<Z>4000</Z>
+						</Vector3>
+						<Vector3 name="position">
+							<X>-80</X>
+							<Y>24</Y>
+							<Z>-149</Z>
+						</Vector3>
+					</Properties>
+				</Item>
+			</Item>
+			<Item class="Script" referent="RBX102">
+				<Properties>
+					<bool name="Disabled">true</bool>
+					<Content name="LinkedSource"><null></null></Content>
+					<string name="Name">RocketScript</string>
+					<ProtectedString name="Source">r = game:service(&quot;RunService&quot;)
+
+shaft = script.Parent
+position = shaft.Position
+
+script.Parent.Explosion.PlayOnRemove = true -- play explosion sound when projectile removed from game
+
+function fly()
+	direction = shaft.CFrame.lookVector 
+	position = position + direction
+	error = position - shaft.Position
+	shaft.Velocity = 20*error
+end
+
+function blow()
+	swoosh:stop()
+	explosion = Instance.new(&quot;Explosion&quot;)
+	explosion.Position = shaft.Position
+
+
+	-- find instigator tag
+	local creator = script.Parent:findFirstChild(&quot;creator&quot;)
+	if creator ~= nil then
+		explosion.Hit:connect(function(part, distance)  onPlayerBlownUp(part, distance, creator) end)
+	end
+
+	explosion.Parent = game.Workspace
+	connection:disconnect()
+	wait(.1)
+	shaft:remove()
+end
+
+function onPlayerBlownUp(part, distance, creator)
+	
+	if part.Name == &quot;Head&quot; then
+		local humanoid = part.Parent:findFirstChild(&quot;Humanoid&quot;)
+		tagHumanoid(humanoid, creator)
+	end
+end
+
+function tagHumanoid(humanoid, creator)
+	-- tag does not need to expire iff all explosions lethal
+	
+	if creator ~= nil then
+		local new_tag = creator:clone()
+		new_tag.Parent = humanoid
+		
+	end
+end
+
+function untagHumanoid(humanoid)
+	if humanoid ~= nil then
+		local tag = humanoid:findFirstChild(&quot;creator&quot;)
+		if tag ~= nil then
+			tag.Parent = nil
+		end
+	end
+end
+
+t, s = r.Stepped:wait()
+
+swoosh = script.Parent.Swoosh
+swoosh:play()
+
+d = t + 10.0 - s
+connection = shaft.Touched:connect(blow)
+
+while t &lt; d do
+	fly()
+	t = r.Stepped:wait()
+end
+
+-- at max range
+script.Parent.Explosion.PlayOnRemove = false
+swoosh:stop()
+shaft:remove()
+</ProtectedString>
+					<bool name="archivable">true</bool>
+				</Properties>
+			</Item>
+			<Item class="Sound" referent="RBX103">
+				<Properties>
+					<bool name="Looped">false</bool>
+					<string name="Name">Explosion</string>
+					<float name="Pitch">1</float>
+					<int name="PlayCount">0</int>
+					<bool name="PlayOnRemove">false</bool>
+					<Content name="SoundId"><url>rbxasset://sounds\collide.wav</url></Content>
+					<float name="Volume">1</float>
+					<bool name="archivable">true</bool>
+				</Properties>
+			</Item>
+			<Item class="Sound" referent="RBX104">
+				<Properties>
+					<bool name="Looped">true</bool>
+					<string name="Name">Swoosh</string>
+					<float name="Pitch">1</float>
+					<int name="PlayCount">-1</int>
+					<bool name="PlayOnRemove">false</bool>
+					<Content name="SoundId"><url>rbxasset://sounds\Rocket whoosh 01.wav</url></Content>
+					<float name="Volume">0.699999988</float>
+					<bool name="archivable">true</bool>
+				</Properties>
+			</Item>
+			<Item class="Sound" referent="RBX105">
+				<Properties>
+					<bool name="Looped">false</bool>
+					<string name="Name">Hit</string>
+					<float name="Pitch">1</float>
+					<int name="PlayCount">-1</int>
+					<bool name="PlayOnRemove">false</bool>
+					<Content name="SoundId"><url>rbxasset://../../../shareddata/RiseOfTheKillbots/sounds/robo_impact_bullet01.wav</url></Content>
+					<float name="Volume">0.300000012</float>
+					<bool name="archivable">true</bool>
+				</Properties>
+			</Item>
+			<Item class="Script" referent="RBX106">
+				<Properties>
+					<bool name="Disabled">true</bool>
+					<Content name="LinkedSource"><null></null></Content>
+					<string name="Name">BrickCleanup</string>
+					<ProtectedString name="Source">-- this script removes its parent from the workspace after 120 seconds
+
+wait(15)
+script.Parent.Parent = nil
+</ProtectedString>
+					<bool name="archivable">true</bool>
+				</Properties>
+			</Item>
+			<Item class="Humanoid" referent="RBX107">
+				<Properties>
+					<float name="Health">100</float>
+					<float name="MaxHealth">100</float>
+					<string name="Name">Humanoid</string>
+					<float name="WalkSpeed">16</float>
+					<bool name="archivable">true</bool>
+				</Properties>
+			</Item>
+			<Item class="StringValue" referent="RBX108">
+				<Properties>
+					<string name="Name">IsKillbot</string>
+					<string name="Value"></string>
+					<bool name="archivable">true</bool>
+				</Properties>
+			</Item>
+			<Item class="Sound" referent="RBX109">
+				<Properties>
+					<bool name="Looped">false</bool>
+					<string name="Name">Death</string>
+					<float name="Pitch">1</float>
+					<int name="PlayCount">-1</int>
+					<bool name="PlayOnRemove">false</bool>
+					<Content name="SoundId"><url>rbxasset://../../../shareddata/RiseOfTheKillbots/sounds/giant_common_explodes_02.wav</url></Content>
+					<float name="Volume">0.300000012</float>
+					<bool name="archivable">true</bool>
+				</Properties>
+			</Item>
+			<Item class="Sound" referent="RBX110">
+				<Properties>
+					<bool name="Looped">false</bool>
+					<string name="Name">Hit_Heavy</string>
+					<float name="Pitch">1</float>
+					<int name="PlayCount">-1</int>
+					<bool name="PlayOnRemove">false</bool>
+					<Content name="SoundId"><url>rbxasset://../../../shareddata/RiseOfTheKillbots/sounds/robo_impact_hard_03.wav</url></Content>
+					<float name="Volume">0.300000012</float>
+					<bool name="archivable">true</bool>
+				</Properties>
+			</Item>
+		</Item>
+		<Item class="NumberValue" referent="RBX111">
+			<Properties>
+				<string name="Name">SpawnedEnemyCount</string>
+				<double name="Value">0</double>
+				<bool name="archivable">true</bool>
+			</Properties>
+		</Item>
+		<Item class="Sky" referent="RBX112">
+			<Properties>
+				<bool name="CelestialBodiesShown">true</bool>
+				<string name="Name">Sky</string>
+				<Content name="SkyboxBk"><url>rbxasset://../../../shareddata/Sky/darksky512_bk.png</url></Content>
+				<Content name="SkyboxDn"><url>rbxasset://../../../shareddata/Sky/darksky512_dn.png</url></Content>
+				<Content name="SkyboxFt"><url>rbxasset://../../../shareddata/Sky/darksky512_ft.png</url></Content>
+				<Content name="SkyboxLf"><url>rbxasset://../../../shareddata/Sky/darksky512_lf.png</url></Content>
+				<Content name="SkyboxRt"><url>rbxasset://../../../shareddata/Sky/darksky512_rt.png</url></Content>
+				<Content name="SkyboxUp"><url>rbxasset://../../../shareddata/Sky/darksky512_up.png</url></Content>
+				<int name="StarCount">3000</int>
+				<bool name="archivable">true</bool>
+			</Properties>
+		</Item>
+		<Item class="NumberValue" referent="RBX113">
+			<Properties>
+				<string name="Name">PreBossDefaultEnemyCount</string>
+				<double name="Value">0</double>
+				<bool name="archivable">true</bool>
+			</Properties>
+		</Item>
+		<Item class="NumberValue" referent="RBX114">
+			<Properties>
+				<string name="Name">WaveMaxForBoss</string>
+				<double name="Value">0</double>
+				<bool name="archivable">true</bool>
+			</Properties>
+		</Item>
+		<Item class="NumberValue" referent="RBX115">
+			<Properties>
+				<string name="Name">WaveForBoss</string>
+				<double name="Value">0</double>
+				<bool name="archivable">true</bool>
+			</Properties>
+		</Item>
+		<Item class="BoolValue" referent="RBX116">
+			<Properties>
+				<string name="Name">WaveNeedsBoss</string>
+				<bool name="Value">false</bool>
+				<bool name="archivable">true</bool>
+			</Properties>
+		</Item>
+	</Item>
+	<External>RBX117</External>
+	<Item class="ChangeHistoryService" referent="RBX118">
+		<Properties>
+			<string name="Name">ChangeHistoryService</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+</roblox>
