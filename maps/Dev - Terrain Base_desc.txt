@@ -1,3 +1,0 @@
-An example which includes some terrain, complete with water!
-
-Only runs in 2012M+.
