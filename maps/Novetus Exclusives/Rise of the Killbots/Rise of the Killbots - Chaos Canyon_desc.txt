@@ -1,0 +1,10 @@
+Killbots tend to enjoy their artificial lives in the scorching heat of the Chaos Canyon. What once was home to ancient ROBLOXian gladiators, is now nothing but Killbot property.
+
+Settings:
+Each wave spawns 30 enemies maximum.
+2 to 4 more enemies spawn per new wave.
+Boss battles happen every 5 waves.
+Heavies start spawning after wave 1.
+Agilities start spawning after wave 3.
+Commanders start spawning after wave 5.
+Commanders have a 1 in 3 chance to spawn after wave 5.

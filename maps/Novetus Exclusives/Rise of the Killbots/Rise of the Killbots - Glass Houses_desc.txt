@@ -1,0 +1,10 @@
+Two teams of mercinaries used to fight over these grounds. When the Killbots invaded, it was quickly abandoned by its former inhabitants. By the time you come around, Heavy Unit shipments have been delayed slightly. This gives you an advantage.
+
+Settings:
+Each wave spawns 30 enemies maximum.
+2 to 4 more enemies spawn per new wave.
+Boss battles happen every 10 waves.
+Heavies start spawning after wave 3.
+Agilities start spawning after wave 4.
+Commanders start spawning after wave 10.
+Commanders have a 1 in 5 chance to spawn after wave 10.

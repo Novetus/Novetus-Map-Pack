@@ -1,0 +1,10 @@
+This lone Baseplate, also known as the Flatlands to many ROBLOXians, was a dimension that rouge warriors were sent to. Here, these warriors used to clash and prove their worth to the ROBLOX HQ. Unfortunately, the Killbots decided to invade, so you have to come here too.
+
+Settings:
+Each wave spawns 20 enemies maximum.
+1 to 3 more enemies spawn per new wave.
+Boss battles happen every 10 waves.
+Heavies start spawning after wave 2.
+Agilities start spawning after wave 4.
+Commanders start spawning after wave 10.
+Commanders have a 1 in 5 chance to spawn after wave 10.

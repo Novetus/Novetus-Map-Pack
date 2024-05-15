@@ -1,0 +1,10 @@
+In a dystopian future, ROBLOXia is overrun by killbots. They started to take control of every notable location in ROBLOXia that could benefit the hordes. It all started with this one small arena, against a ROBLOXian named Timmy.
+
+Settings:
+Each wave spawns 20 enemies maximum.
+1 to 3 more enemies spawn per new wave.
+Boss battles happen every 10 waves.
+Heavies start spawning after wave 2.
+Agilities start spawning after wave 4.
+Commanders start spawning after wave 10.
+Commanders have a 1 in 5 chance to spawn after wave 10.

@@ -1,0 +1,12 @@
+Much like the Glass Houses, this isolated wasteland was home to endless death and war. However, as the killbots began to invade the ROBLOXian landscapes, the mercinaries focused their attention on the Killbots.
+
+ROBLOX Shootout 2 was originally created in 2015-2016 by Bitl for RBLXDev and was an exclusive for RBXLegacy and Novetus after its closure. This version of the map is the first version of it since the FFA and Team-based maps. 
+
+Settings:
+Each wave spawns 20 enemies maximum.
+1 to 3 more enemies spawn per new wave.
+Boss battles happen every 10 waves.
+Heavies start spawning after wave 2.
+Agilities start spawning after wave 4.
+Commanders start spawning after wave 10.
+Commanders have a 1 in 5 chance to spawn after wave 10.

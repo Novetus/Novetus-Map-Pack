@@ -1,0 +1,10 @@
+This tower serves as the main command center for the ROBLOXian military. Once thought to be guarded as much as the Crossroads, it was later exposed to the public that it was unprotected. Its only inhabitants are the people trying to find a cause for the Killbots Invasion. Your job is to be their protection. Unfortunately, the Killbots have come in larger numbers than the Crossroads invasion.
+
+Settings:
+Each wave spawns 35 enemies maximum.
+3 to 5 more enemies spawn per new wave.
+Boss battles happen every 10 waves.
+Heavies start spawning after wave 2.
+Agilities start spawning after wave 4.
+Commanders start spawning after wave 10.
+Commanders have a 1 in 5 chance to spawn after wave 10.

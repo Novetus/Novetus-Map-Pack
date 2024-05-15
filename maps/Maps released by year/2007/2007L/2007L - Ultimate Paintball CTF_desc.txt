@@ -1,0 +1,1 @@
+How to play: Equip paintball gun. Press "q" to change modes, "r" to get out a paint grenade. KOs are worth 10 points, deaths are -4, teamkills are -8, staying in the "hill" (white patch in very middle) earns 2 points every few seconds. LAST UPDATES--> no more spawnkilling. Game resets every 10mins.

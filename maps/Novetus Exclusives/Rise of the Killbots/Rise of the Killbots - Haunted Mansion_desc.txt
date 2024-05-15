@@ -1,0 +1,17 @@
+The Killbots are back! After millenia, the Killbots have been brought back from their grave defeat from the Heights. On top of that, they have some pretty sweet Halloween costumes.
+
+Note: 2007E won't be able to view the killbots on this map because the client does not support Part Colors on SpecialMeshes.
+
+Settings:
+Each wave spawns 20 enemies maximum.
+1 to 3 more enemies spawn per new wave.
+Boss battles happen every 10 waves.
+Heavies start spawning after wave 2.
+Agilities start spawning after wave 4.
+Commanders start spawning after wave 10.
+Commanders have a 1 in 5 chance to spawn after wave 10.
+
+Haunted Mansion exclusive changes:
+The Killbots are rusted SKULLS. Spooky.
+The Killbots now look directly at you.
+The Haunted Mansion gets destroyed.

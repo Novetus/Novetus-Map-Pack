@@ -1,0 +1,3 @@
+Optimized for 2011+.
+
+An example which showcases how Dialogs work in Novetus.
