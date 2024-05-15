@@ -1,0 +1,1 @@
+Updates: Poisoner damage increased to that of normal sword. Illumina jump forces doubled. Firebrand lunge cooldown doubled, lunge damage slightly nerfed. Shield sphere length increased to 8 seconds. Hopefully this will make all the weapons useful in some situations.
