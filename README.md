@@ -1,3 +1,7 @@
+# DISCLAIMER
+
+This map pack represents the current variety of maps as of the latest Snapshot release. Stable releases, for the time being, do not come with this map pack.
+
 # Novetus Map Pack
  
 The full Novetus Map Pack, based off of the Finobe Essentials map pack.
